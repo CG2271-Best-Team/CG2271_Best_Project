@@ -1,0 +1,104 @@
+#include "MKL25Z4.h"                    // Device header
+#define RED_LED 18 // PortB Pin 18
+#define GREEN_LED 19 // PortB Pin 19
+#define BLUE_LED 1 // PortD Pin 1
+#define SWITCH 6 // PortD Pin 6
+#define MASK(x) (1 << (x))
+
+enum Color {
+    Red,
+    Green,
+    Blue
+};
+
+volatile enum Color currentColor;
+
+void InitLED(void);
+void InitSwitch(void);
+void Led_Control(enum Color color);
+void PORTD_IRQHandler(void);
+
+void InitLED(void)
+{
+  // Enable Clock to PORTB and PORTD
+  SIM->SCGC5 |= ((SIM_SCGC5_PORTB_MASK) | (SIM_SCGC5_PORTD_MASK));
+  
+  // Configure MUX settings to make all 3 pins GPIO
+  PORTB->PCR[RED_LED] &= ~PORT_PCR_MUX_MASK;
+  PORTB->PCR[RED_LED] |= PORT_PCR_MUX(1);
+  PORTB->PCR[GREEN_LED] &= ~PORT_PCR_MUX_MASK;
+  PORTB->PCR[GREEN_LED] |= PORT_PCR_MUX(1);
+  PORTD->PCR[BLUE_LED] &= ~PORT_PCR_MUX_MASK;
+  PORTD->PCR[BLUE_LED] |= PORT_PCR_MUX(1);
+  
+  // Set Data Direction Registers for PortB and PortD
+  PTB->PDDR |= (MASK(RED_LED) | MASK(GREEN_LED));
+  PTD->PDDR |= MASK(BLUE_LED);
+}
+
+void InitSwitch(void) 
+{
+  // enable clock for PortD
+  SIM->SCGC5 |= (SIM_SCGC5_PORTD_MASK);
+  
+  /* Select GPIO and enable pull-up resistors and interrupts on
+  falling edges of pin connected to switch*/
+  PORTD->PCR[SWITCH] |= PORT_PCR_MUX(1) |      // select GPIO function
+                        PORT_PCR_IRQC(0xaa) |  // falling edge to trigger interrupt
+                        PORT_PCR_PE_MASK |     // enable internal pull up or pull down
+                        PORT_PCR_PS_MASK;       // select internal pull up
+                
+  // Set PORT D Switch bit to input
+  PTD->PDDR &= ~MASK(SWITCH);
+  
+  //Enable Interrupts
+  NVIC_EnableIRQ(PORTD_IRQn);
+}
+
+void Led_Control(enum Color color)
+{
+  
+  if(color == Red) {
+    PTB->PDOR &= ~MASK(RED_LED);
+    PTB->PDOR |= MASK(GREEN_LED);
+    PTD->PDOR |= MASK(BLUE_LED);
+  }
+  if(color == Green) {
+    PTB->PDOR |= MASK(RED_LED);
+    PTB->PDOR &= ~MASK(GREEN_LED);
+    PTD->PDOR |= MASK(BLUE_LED);
+  }
+  if(color == Blue) {
+    PTB->PDOR |= MASK(RED_LED);
+    PTB->PDOR |= MASK(GREEN_LED);
+    PTD->PDOR &= ~MASK(BLUE_LED);
+  }
+}
+
+void PORTD_IRQHandler(void)
+{
+  // Clear Pending IRQ
+  NVIC_ClearPendingIRQ(PORTD_IRQn);
+  
+  // Updating some variable / flag
+  if(currentColor == Red)
+    currentColor = Green;
+  else if(currentColor == Green)
+    currentColor = Blue;
+  else if(currentColor == Blue)
+    currentColor = Red;
+  
+  //Clear INT Flag
+  PORTD->ISFR |= 1;
+}
+
+int main(void)
+{
+  InitSwitch();
+  InitLED();
+  currentColor = Green;
+  while(1)
+  {
+    Led_Control(currentColor);
+  }
+}
