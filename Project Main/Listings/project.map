@@ -1,0 +1,1731 @@
+Component: Arm Compiler for Embedded 6.19 Tool: armlink [5d895400]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(.text.Init_UART2) refers to uidiv_div0.o(.text) for __aeabi_uidiv
+    main.o(.text.Init_UART2) refers to main.o(.text.__NVIC_ClearPendingIRQ) for __NVIC_ClearPendingIRQ
+    main.o(.text.Init_UART2) refers to main.o(.text.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    main.o(.ARM.exidx.text.Init_UART2) refers to main.o(.text.Init_UART2) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.__NVIC_ClearPendingIRQ) refers to main.o(.text.__NVIC_ClearPendingIRQ) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.__NVIC_EnableIRQ) refers to main.o(.text.__NVIC_EnableIRQ) for [Anonymous Symbol]
+    main.o(.text.UART2_IRQHandler) refers to main.o(.text.__NVIC_ClearPendingIRQ) for __NVIC_ClearPendingIRQ
+    main.o(.text.UART2_IRQHandler) refers to main.o(.bss.data) for data
+    main.o(.text.UART2_IRQHandler) refers to main.o(.data.LED_flag) for LED_flag
+    main.o(.ARM.exidx.text.UART2_IRQHandler) refers to main.o(.text.UART2_IRQHandler) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.Direction_convert) refers to main.o(.text.Direction_convert) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.Init_PWN) refers to main.o(.text.Init_PWN) for [Anonymous Symbol]
+    main.o(.text.playNote) refers to fcmpeq.o(.text) for __aeabi_fcmpeq
+    main.o(.text.playNote) refers to fmul.o(.text) for __aeabi_fmul
+    main.o(.text.playNote) refers to fdiv.o(.text) for __aeabi_fdiv
+    main.o(.text.playNote) refers to ffixi.o(.text) for __aeabi_f2iz
+    main.o(.text.playNote) refers to main.o(.text.delay) for delay
+    main.o(.text.playNote) refers to main.o(.bss.tone) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.playNote) refers to main.o(.text.playNote) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.delay) refers to main.o(.text.delay) for [Anonymous Symbol]
+    main.o(.text.playHappyBirthday) refers to main.o(.text.playNote) for playNote
+    main.o(.text.playHappyBirthday) refers to main.o(.rodata..L__const.playHappyBirthday.notes) for [Anonymous Symbol]
+    main.o(.text.playHappyBirthday) refers to main.o(.rodata..L__const.playHappyBirthday.durations) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.playHappyBirthday) refers to main.o(.text.playHappyBirthday) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.playEndSong) refers to main.o(.text.playEndSong) for [Anonymous Symbol]
+    main.o(.text.PWM01_forward) refers to idiv_div0.o(.text) for __aeabi_idiv
+    main.o(.ARM.exidx.text.PWM01_forward) refers to main.o(.text.PWM01_forward) for [Anonymous Symbol]
+    main.o(.text.PWM01_back) refers to idiv_div0.o(.text) for __aeabi_idiv
+    main.o(.ARM.exidx.text.PWM01_back) refers to main.o(.text.PWM01_back) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.PWM01_rest) refers to main.o(.text.PWM01_rest) for [Anonymous Symbol]
+    main.o(.text.PWM23_forward) refers to idiv_div0.o(.text) for __aeabi_idiv
+    main.o(.ARM.exidx.text.PWM23_forward) refers to main.o(.text.PWM23_forward) for [Anonymous Symbol]
+    main.o(.text.PWM23_back) refers to idiv_div0.o(.text) for __aeabi_idiv
+    main.o(.ARM.exidx.text.PWM23_back) refers to main.o(.text.PWM23_back) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.PWM23_rest) refers to main.o(.text.PWM23_rest) for [Anonymous Symbol]
+    main.o(.text.Motor_Control) refers to main.o(.text.PWM01_forward) for PWM01_forward
+    main.o(.text.Motor_Control) refers to main.o(.text.PWM23_forward) for PWM23_forward
+    main.o(.text.Motor_Control) refers to main.o(.text.PWM01_back) for PWM01_back
+    main.o(.text.Motor_Control) refers to main.o(.text.PWM23_back) for PWM23_back
+    main.o(.text.Motor_Control) refers to main.o(.text.PWM01_rest) for PWM01_rest
+    main.o(.text.Motor_Control) refers to main.o(.text.PWM23_rest) for PWM23_rest
+    main.o(.ARM.exidx.text.Motor_Control) refers to main.o(.text.Motor_Control) for [Anonymous Symbol]
+    main.o(.text.Init_PIT) refers to main.o(.text.__NVIC_ClearPendingIRQ) for __NVIC_ClearPendingIRQ
+    main.o(.text.Init_PIT) refers to main.o(.text.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    main.o(.ARM.exidx.text.Init_PIT) refers to main.o(.text.Init_PIT) for [Anonymous Symbol]
+    main.o(.text.PIT_IRQHandler) refers to main.o(.text.__NVIC_ClearPendingIRQ) for __NVIC_ClearPendingIRQ
+    main.o(.text.PIT_IRQHandler) refers to main.o(.data.RED_LED_FLAG) for RED_LED_FLAG
+    main.o(.text.PIT_IRQHandler) refers to main.o(.data.LED_flag) for LED_flag
+    main.o(.text.PIT_IRQHandler) refers to main.o(.data.Green_LED_index) for Green_LED_index
+    main.o(.ARM.exidx.text.PIT_IRQHandler) refers to main.o(.text.PIT_IRQHandler) for [Anonymous Symbol]
+    main.o(.text.Red_LED_Control) refers to main.o(.data.RED_LED_FLAG) for RED_LED_FLAG
+    main.o(.text.Red_LED_Control) refers to main.o(.bss.test_flag) for test_flag
+    main.o(.ARM.exidx.text.Red_LED_Control) refers to main.o(.text.Red_LED_Control) for [Anonymous Symbol]
+    main.o(.text.Green_LED_Control) refers to main.o(.data.LED_flag) for LED_flag
+    main.o(.text.Green_LED_Control) refers to main.o(.data.Green_LED_index) for Green_LED_index
+    main.o(.ARM.exidx.text.Green_LED_Control) refers to main.o(.text.Green_LED_Control) for [Anonymous Symbol]
+    main.o(.text.Red_LED_thread) refers to main.o(.text.Red_LED_Control) for Red_LED_Control
+    main.o(.ARM.exidx.text.Red_LED_thread) refers to main.o(.text.Red_LED_thread) for [Anonymous Symbol]
+    main.o(.text.Green_LED_thread) refers to main.o(.text.Green_LED_Control) for Green_LED_Control
+    main.o(.ARM.exidx.text.Green_LED_thread) refers to main.o(.text.Green_LED_thread) for [Anonymous Symbol]
+    main.o(.text.main) refers to system_mkl25z4.o(.text.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    main.o(.text.main) refers to main.o(.text.Init_PWN) for Init_PWN
+    main.o(.text.main) refers to main.o(.text.Init_PIT) for Init_PIT
+    main.o(.text.main) refers to main.o(.text.Init_UART2) for Init_UART2
+    main.o(.text.main) refers to rtx_kernel.o(.text.osKernelInitialize) for osKernelInitialize
+    main.o(.text.main) refers to rtx_thread.o(.text.osThreadNew) for osThreadNew
+    main.o(.text.main) refers to rtx_kernel.o(.text.osKernelStart) for osKernelStart
+    main.o(.text.main) refers to main.o(.text.Red_LED_thread) for Red_LED_thread
+    main.o(.text.main) refers to main.o(.text.Green_LED_thread) for Green_LED_thread
+    main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
+    rtx_config.o(.ARM.exidx.text.osRtxIdleThread) refers to rtx_config.o(.text.osRtxIdleThread) for [Anonymous Symbol]
+    rtx_config.o(.ARM.exidx.text.osRtxErrorNotify) refers to rtx_config.o(.text.osRtxErrorNotify) for [Anonymous Symbol]
+    rtx_lib.o(.rodata.os_idle_thread_attr) refers to rtx_lib.o(.bss.os.thread.cb) for [Anonymous Symbol]
+    rtx_lib.o(.rodata.os_idle_thread_attr) refers to rtx_lib.o(.bss.os.thread.idle.stack) for [Anonymous Symbol]
+    rtx_lib.o(.rodata.os_timer_thread_attr) refers to rtx_lib.o(.bss.os.thread.cb) for [Anonymous Symbol]
+    rtx_lib.o(.rodata.os_timer_thread_attr) refers to rtx_lib.o(.bss.os.thread.timer.stack) for [Anonymous Symbol]
+    rtx_lib.o(.rodata.os_timer_mq_attr) refers to rtx_lib.o(.bss.os.msgqueue.cb) for [Anonymous Symbol]
+    rtx_lib.o(.rodata.os_timer_mq_attr) refers to rtx_lib.o(.bss.os.msgqueue.mem) for [Anonymous Symbol]
+    rtx_lib.o(.rodata) refers to rtx_lib.o(.bss.os) for [Anonymous Symbol]
+    rtx_lib.o(.rodata) refers to rtx_lib.o(.rodata.os_idle_thread_attr) for [Anonymous Symbol]
+    rtx_lib.o(.rodata) refers to rtx_lib.o(.rodata.os_timer_thread_attr) for [Anonymous Symbol]
+    rtx_lib.o(.rodata) refers to rtx_timer.o(.text.osRtxTimerThread) for osRtxTimerThread
+    rtx_lib.o(.rodata) refers to rtx_timer.o(.text.osRtxTimerSetup) for osRtxTimerSetup
+    rtx_lib.o(.rodata) refers to rtx_lib.o(.rodata.os_timer_mq_attr) for [Anonymous Symbol]
+    rtx_lib.o(.rodata.irqRtxLibRef) refers to irq_armv6m.o(.rodata) for irqRtxLib
+    startup_mkl25z4.o(RESET) refers to startup_mkl25z4.o(STACK) for __initial_sp
+    startup_mkl25z4.o(RESET) refers to startup_mkl25z4.o(.text) for Reset_Handler
+    startup_mkl25z4.o(RESET) refers to irq_armv6m.o(.text) for SVC_Handler
+    startup_mkl25z4.o(RESET) refers to main.o(.text.UART2_IRQHandler) for UART2_IRQHandler
+    startup_mkl25z4.o(RESET) refers to main.o(.text.PIT_IRQHandler) for PIT_IRQHandler
+    startup_mkl25z4.o(.text) refers to system_mkl25z4.o(.text.SystemInit) for SystemInit
+    startup_mkl25z4.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    system_mkl25z4.o(.ARM.exidx.text.SystemInit) refers to system_mkl25z4.o(.text.SystemInit) for [Anonymous Symbol]
+    system_mkl25z4.o(.text.SystemCoreClockUpdate) refers to uidiv_div0.o(.text) for __aeabi_uidiv
+    system_mkl25z4.o(.text.SystemCoreClockUpdate) refers to system_mkl25z4.o(.data.SystemCoreClock) for SystemCoreClock
+    system_mkl25z4.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_mkl25z4.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
+    rtx_kernel.o(.ARM.exidx.text.osRtxKernelPreInit) refers to rtx_kernel.o(.text.osRtxKernelPreInit) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osRtxKernelErrorNotify) refers to rtx_config.o(.text.osRtxErrorNotify) for osRtxErrorNotify
+    rtx_kernel.o(.ARM.exidx.text.osRtxKernelErrorNotify) refers to rtx_kernel.o(.text.osRtxKernelErrorNotify) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelInitialize) refers to rtx_kernel.o(.text.osRtxKernelPreInit) for osRtxKernelPreInit
+    rtx_kernel.o(.text.osKernelInitialize) refers to rtx_kernel.o(.text.svcRtxKernelInitialize) for svcRtxKernelInitialize
+    rtx_kernel.o(.ARM.exidx.text.osKernelInitialize) refers to rtx_kernel.o(.text.osKernelInitialize) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelGetInfo) refers to rtx_kernel.o(.text.svcRtxKernelGetInfo) for svcRtxKernelGetInfo
+    rtx_kernel.o(.ARM.exidx.text.osKernelGetInfo) refers to rtx_kernel.o(.text.osKernelGetInfo) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelGetInfo) refers to memcpya.o(.text) for __aeabi_memcpy
+    rtx_kernel.o(.text.svcRtxKernelGetInfo) refers to rtx_kernel.o(.rodata.str1.4) for [Anonymous Symbol]
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetInfo) refers to rtx_kernel.o(.text.svcRtxKernelGetInfo) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelGetState) refers to rtx_kernel.o(.text.svcRtxKernelGetState) for svcRtxKernelGetState
+    rtx_kernel.o(.text.osKernelGetState) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.ARM.exidx.text.osKernelGetState) refers to rtx_kernel.o(.text.osKernelGetState) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelGetState) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetState) refers to rtx_kernel.o(.text.svcRtxKernelGetState) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelStart) refers to rtx_kernel.o(.text.svcRtxKernelStart) for svcRtxKernelStart
+    rtx_kernel.o(.ARM.exidx.text.osKernelStart) refers to rtx_kernel.o(.text.osKernelStart) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelLock) refers to rtx_kernel.o(.text.svcRtxKernelLock) for svcRtxKernelLock
+    rtx_kernel.o(.ARM.exidx.text.osKernelLock) refers to rtx_kernel.o(.text.osKernelLock) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelUnlock) refers to rtx_kernel.o(.text.svcRtxKernelUnlock) for svcRtxKernelUnlock
+    rtx_kernel.o(.ARM.exidx.text.osKernelUnlock) refers to rtx_kernel.o(.text.osKernelUnlock) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelRestoreLock) refers to rtx_kernel.o(.text.svcRtxKernelRestoreLock) for svcRtxKernelRestoreLock
+    rtx_kernel.o(.ARM.exidx.text.osKernelRestoreLock) refers to rtx_kernel.o(.text.osKernelRestoreLock) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelSuspend) refers to rtx_kernel.o(.text.svcRtxKernelSuspend) for svcRtxKernelSuspend
+    rtx_kernel.o(.ARM.exidx.text.osKernelSuspend) refers to rtx_kernel.o(.text.osKernelSuspend) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelResume) refers to rtx_kernel.o(.text.svcRtxKernelResume) for svcRtxKernelResume
+    rtx_kernel.o(.ARM.exidx.text.osKernelResume) refers to rtx_kernel.o(.text.osKernelResume) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelGetTickCount) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.text.osKernelGetTickCount) refers to rtx_kernel.o(.text.svcRtxKernelGetTickCount) for svcRtxKernelGetTickCount
+    rtx_kernel.o(.ARM.exidx.text.osKernelGetTickCount) refers to rtx_kernel.o(.text.osKernelGetTickCount) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelGetTickCount) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetTickCount) refers to rtx_kernel.o(.text.svcRtxKernelGetTickCount) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelGetTickFreq) refers to rtx_lib.o(.rodata) for osRtxConfig
+    rtx_kernel.o(.text.osKernelGetTickFreq) refers to rtx_kernel.o(.text.svcRtxKernelGetTickFreq) for svcRtxKernelGetTickFreq
+    rtx_kernel.o(.ARM.exidx.text.osKernelGetTickFreq) refers to rtx_kernel.o(.text.osKernelGetTickFreq) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelGetTickFreq) refers to rtx_lib.o(.rodata) for osRtxConfig
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetTickFreq) refers to rtx_kernel.o(.text.svcRtxKernelGetTickFreq) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelGetSysTimerCount) refers to rtx_kernel.o(.text.svcRtxKernelGetSysTimerCount) for svcRtxKernelGetSysTimerCount
+    rtx_kernel.o(.ARM.exidx.text.osKernelGetSysTimerCount) refers to rtx_kernel.o(.text.osKernelGetSysTimerCount) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelGetSysTimerCount) refers to os_systick.o(.text.OS_Tick_GetCount) for OS_Tick_GetCount
+    rtx_kernel.o(.text.svcRtxKernelGetSysTimerCount) refers to os_systick.o(.text.OS_Tick_GetOverflow) for OS_Tick_GetOverflow
+    rtx_kernel.o(.text.svcRtxKernelGetSysTimerCount) refers to os_systick.o(.text.OS_Tick_GetInterval) for OS_Tick_GetInterval
+    rtx_kernel.o(.text.svcRtxKernelGetSysTimerCount) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetSysTimerCount) refers to rtx_kernel.o(.text.svcRtxKernelGetSysTimerCount) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelGetSysTimerFreq) refers to os_systick.o(.text.OS_Tick_GetClock) for OS_Tick_GetClock
+    rtx_kernel.o(.text.osKernelGetSysTimerFreq) refers to rtx_kernel.o(.text.svcRtxKernelGetSysTimerFreq) for svcRtxKernelGetSysTimerFreq
+    rtx_kernel.o(.ARM.exidx.text.osKernelGetSysTimerFreq) refers to rtx_kernel.o(.text.osKernelGetSysTimerFreq) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelGetSysTimerFreq) refers to os_systick.o(.text.OS_Tick_GetClock) for OS_Tick_GetClock
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetSysTimerFreq) refers to rtx_kernel.o(.text.svcRtxKernelGetSysTimerFreq) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelInitialize) refers to rtx_memory.o(.text.osRtxMemoryInit) for osRtxMemoryInit
+    rtx_kernel.o(.text.svcRtxKernelInitialize) refers to rtx_mempool.o(.text.osRtxMemoryPoolInit) for osRtxMemoryPoolInit
+    rtx_kernel.o(.text.svcRtxKernelInitialize) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.text.svcRtxKernelInitialize) refers to rtx_lib.o(.rodata) for osRtxConfig
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelInitialize) refers to rtx_kernel.o(.text.svcRtxKernelInitialize) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelStart) refers to rtx_thread.o(.text.osRtxThreadStartup) for osRtxThreadStartup
+    rtx_kernel.o(.text.svcRtxKernelStart) refers to os_systick.o(.text.OS_Tick_Setup) for OS_Tick_Setup
+    rtx_kernel.o(.text.svcRtxKernelStart) refers to os_systick.o(.text.OS_Tick_GetIRQn) for OS_Tick_GetIRQn
+    rtx_kernel.o(.text.svcRtxKernelStart) refers to os_systick.o(.text.OS_Tick_Enable) for OS_Tick_Enable
+    rtx_kernel.o(.text.svcRtxKernelStart) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_kernel.o(.text.svcRtxKernelStart) refers to rtx_thread.o(.text.osRtxThreadSwitch) for osRtxThreadSwitch
+    rtx_kernel.o(.text.svcRtxKernelStart) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.text.svcRtxKernelStart) refers to rtx_lib.o(.rodata) for osRtxConfig
+    rtx_kernel.o(.text.svcRtxKernelStart) refers to irq_armv6m.o(.text) for SysTick_Handler
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelStart) refers to rtx_kernel.o(.text.svcRtxKernelStart) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelLock) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelLock) refers to rtx_kernel.o(.text.svcRtxKernelLock) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelUnlock) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelUnlock) refers to rtx_kernel.o(.text.svcRtxKernelUnlock) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelRestoreLock) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelRestoreLock) refers to rtx_kernel.o(.text.svcRtxKernelRestoreLock) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelSuspend) refers to os_systick.o(.text.OS_Tick_Disable) for OS_Tick_Disable
+    rtx_kernel.o(.text.svcRtxKernelSuspend) refers to rtx_kernel.o(.text.GetKernelSleepTime) for GetKernelSleepTime
+    rtx_kernel.o(.text.svcRtxKernelSuspend) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelSuspend) refers to rtx_kernel.o(.text.svcRtxKernelSuspend) for [Anonymous Symbol]
+    rtx_kernel.o(.text.GetKernelSleepTime) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.ARM.exidx.text.GetKernelSleepTime) refers to rtx_kernel.o(.text.GetKernelSleepTime) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelResume) refers to rtx_kernel.o(.text.GetKernelSleepTime) for GetKernelSleepTime
+    rtx_kernel.o(.text.svcRtxKernelResume) refers to rtx_thread.o(.text.osRtxThreadDelayTick) for osRtxThreadDelayTick
+    rtx_kernel.o(.text.svcRtxKernelResume) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_kernel.o(.text.svcRtxKernelResume) refers to os_systick.o(.text.OS_Tick_Enable) for OS_Tick_Enable
+    rtx_kernel.o(.text.svcRtxKernelResume) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelResume) refers to rtx_kernel.o(.text.svcRtxKernelResume) for [Anonymous Symbol]
+    rtx_kernel.o(.data.os) refers to rtx_kernel.o(.rodata.str1.4) for [Anonymous Symbol]
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadListPut) refers to rtx_thread.o(.text.osRtxThreadListPut) for [Anonymous Symbol]
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadListGet) refers to rtx_thread.o(.text.osRtxThreadListGet) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadListSort) refers to rtx_thread.o(.text.osRtxThreadListRemove) for osRtxThreadListRemove
+    rtx_thread.o(.text.osRtxThreadListSort) refers to rtx_thread.o(.text.osRtxThreadListPut) for osRtxThreadListPut
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadListSort) refers to rtx_thread.o(.text.osRtxThreadListSort) for [Anonymous Symbol]
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadListRemove) refers to rtx_thread.o(.text.osRtxThreadListRemove) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadReadyPut) refers to rtx_thread.o(.text.osRtxThreadListPut) for osRtxThreadListPut
+    rtx_thread.o(.text.osRtxThreadReadyPut) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadReadyPut) refers to rtx_thread.o(.text.osRtxThreadReadyPut) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadDelayTick) refers to rtx_mutex.o(.text.osRtxMutexOwnerRestore) for osRtxMutexOwnerRestore
+    rtx_thread.o(.text.osRtxThreadDelayTick) refers to rtx_thread.o(.text.osRtxThreadListRemove) for osRtxThreadListRemove
+    rtx_thread.o(.text.osRtxThreadDelayTick) refers to rtx_thread.o(.text.osRtxThreadReadyPut) for osRtxThreadReadyPut
+    rtx_thread.o(.text.osRtxThreadDelayTick) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadDelayTick) refers to rtx_thread.o(.text.osRtxThreadDelayTick) for [Anonymous Symbol]
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadRegPtr) refers to rtx_thread.o(.text.osRtxThreadRegPtr) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadSwitch) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadSwitch) refers to rtx_thread.o(.text.osRtxThreadSwitch) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadDispatch) refers to rtx_thread.o(.text.osRtxThreadReadyPut) for osRtxThreadReadyPut
+    rtx_thread.o(.text.osRtxThreadDispatch) refers to rtx_thread.o(.text.osRtxThreadListRemove) for osRtxThreadListRemove
+    rtx_thread.o(.text.osRtxThreadDispatch) refers to rtx_thread.o(.text.osRtxThreadBlock) for osRtxThreadBlock
+    rtx_thread.o(.text.osRtxThreadDispatch) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadDispatch) refers to rtx_thread.o(.text.osRtxThreadDispatch) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadBlock) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadBlock) refers to rtx_thread.o(.text.osRtxThreadBlock) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadWaitExit) refers to rtx_thread.o(.text.osRtxThreadDelayRemove) for osRtxThreadDelayRemove
+    rtx_thread.o(.text.osRtxThreadWaitExit) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_thread.o(.text.osRtxThreadWaitExit) refers to rtx_thread.o(.text.osRtxThreadReadyPut) for osRtxThreadReadyPut
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadWaitExit) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadDelayRemove) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadDelayRemove) refers to rtx_thread.o(.text.osRtxThreadDelayRemove) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadWaitEnter) refers to rtx_thread.o(.text.osRtxThreadDelayInsert) for osRtxThreadDelayInsert
+    rtx_thread.o(.text.osRtxThreadWaitEnter) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadWaitEnter) refers to rtx_thread.o(.text.osRtxThreadWaitEnter) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadDelayInsert) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadDelayInsert) refers to rtx_thread.o(.text.osRtxThreadDelayInsert) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadStartup) refers to rtx_thread.o(.text.svcRtxThreadNew) for svcRtxThreadNew
+    rtx_thread.o(.text.osRtxThreadStartup) refers to rtx_lib.o(.rodata) for osRtxConfig
+    rtx_thread.o(.text.osRtxThreadStartup) refers to rtx_config.o(.text.osRtxIdleThread) for osRtxIdleThread
+    rtx_thread.o(.text.osRtxThreadStartup) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadStartup) refers to rtx_thread.o(.text.osRtxThreadStartup) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadNew) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_thread.o(.text.svcRtxThreadNew) refers to rtx_memory.o(.text.osRtxMemoryAlloc) for osRtxMemoryAlloc
+    rtx_thread.o(.text.svcRtxThreadNew) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_thread.o(.text.svcRtxThreadNew) refers to rtx_memory.o(.text.osRtxMemoryFree) for osRtxMemoryFree
+    rtx_thread.o(.text.svcRtxThreadNew) refers to memseta.o(.text) for __aeabi_memclr4
+    rtx_thread.o(.text.svcRtxThreadNew) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_thread.o(.text.svcRtxThreadNew) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.text.svcRtxThreadNew) refers to rtx_lib.o(.rodata) for osRtxConfig
+    rtx_thread.o(.text.svcRtxThreadNew) refers to rtx_thread.o(.text.osThreadExit) for osThreadExit
+    rtx_thread.o(.text.svcRtxThreadNew) refers to rtx_thread.o(.text.osRtxThreadPostProcess) for osRtxThreadPostProcess
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadNew) refers to rtx_thread.o(.text.svcRtxThreadNew) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadNew) refers to rtx_thread.o(.text.svcRtxThreadNew) for svcRtxThreadNew
+    rtx_thread.o(.ARM.exidx.text.osThreadNew) refers to rtx_thread.o(.text.osThreadNew) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadGetName) refers to rtx_thread.o(.text.svcRtxThreadGetName) for svcRtxThreadGetName
+    rtx_thread.o(.ARM.exidx.text.osThreadGetName) refers to rtx_thread.o(.text.osThreadGetName) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadGetId) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.text.osThreadGetId) refers to rtx_thread.o(.text.svcRtxThreadGetId) for svcRtxThreadGetId
+    rtx_thread.o(.ARM.exidx.text.osThreadGetId) refers to rtx_thread.o(.text.osThreadGetId) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadGetId) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetId) refers to rtx_thread.o(.text.svcRtxThreadGetId) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadGetState) refers to rtx_thread.o(.text.svcRtxThreadGetState) for svcRtxThreadGetState
+    rtx_thread.o(.ARM.exidx.text.osThreadGetState) refers to rtx_thread.o(.text.osThreadGetState) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadGetStackSize) refers to rtx_thread.o(.text.svcRtxThreadGetStackSize) for svcRtxThreadGetStackSize
+    rtx_thread.o(.ARM.exidx.text.osThreadGetStackSize) refers to rtx_thread.o(.text.osThreadGetStackSize) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadGetStackSpace) refers to rtx_thread.o(.text.svcRtxThreadGetStackSpace) for svcRtxThreadGetStackSpace
+    rtx_thread.o(.ARM.exidx.text.osThreadGetStackSpace) refers to rtx_thread.o(.text.osThreadGetStackSpace) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadSetPriority) refers to rtx_thread.o(.text.svcRtxThreadSetPriority) for svcRtxThreadSetPriority
+    rtx_thread.o(.ARM.exidx.text.osThreadSetPriority) refers to rtx_thread.o(.text.osThreadSetPriority) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadGetPriority) refers to rtx_thread.o(.text.svcRtxThreadGetPriority) for svcRtxThreadGetPriority
+    rtx_thread.o(.ARM.exidx.text.osThreadGetPriority) refers to rtx_thread.o(.text.osThreadGetPriority) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadYield) refers to rtx_thread.o(.text.svcRtxThreadYield) for svcRtxThreadYield
+    rtx_thread.o(.ARM.exidx.text.osThreadYield) refers to rtx_thread.o(.text.osThreadYield) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadSuspend) refers to rtx_thread.o(.text.svcRtxThreadSuspend) for svcRtxThreadSuspend
+    rtx_thread.o(.ARM.exidx.text.osThreadSuspend) refers to rtx_thread.o(.text.osThreadSuspend) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadResume) refers to rtx_thread.o(.text.svcRtxThreadResume) for svcRtxThreadResume
+    rtx_thread.o(.ARM.exidx.text.osThreadResume) refers to rtx_thread.o(.text.osThreadResume) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadDetach) refers to rtx_thread.o(.text.svcRtxThreadDetach) for svcRtxThreadDetach
+    rtx_thread.o(.ARM.exidx.text.osThreadDetach) refers to rtx_thread.o(.text.osThreadDetach) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadJoin) refers to rtx_thread.o(.text.svcRtxThreadJoin) for svcRtxThreadJoin
+    rtx_thread.o(.ARM.exidx.text.osThreadJoin) refers to rtx_thread.o(.text.osThreadJoin) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadExit) refers to rtx_thread.o(.text.svcRtxThreadExit) for svcRtxThreadExit
+    rtx_thread.o(.ARM.exidx.text.osThreadExit) refers to rtx_thread.o(.text.osThreadExit) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadTerminate) refers to rtx_thread.o(.text.svcRtxThreadTerminate) for svcRtxThreadTerminate
+    rtx_thread.o(.ARM.exidx.text.osThreadTerminate) refers to rtx_thread.o(.text.osThreadTerminate) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadGetCount) refers to rtx_thread.o(.text.svcRtxThreadGetCount) for svcRtxThreadGetCount
+    rtx_thread.o(.ARM.exidx.text.osThreadGetCount) refers to rtx_thread.o(.text.osThreadGetCount) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadEnumerate) refers to rtx_thread.o(.text.svcRtxThreadEnumerate) for svcRtxThreadEnumerate
+    rtx_thread.o(.ARM.exidx.text.osThreadEnumerate) refers to rtx_thread.o(.text.osThreadEnumerate) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadFlagsSet) refers to rtx_system.o(.text.osRtxPostProcess) for osRtxPostProcess
+    rtx_thread.o(.text.osThreadFlagsSet) refers to rtx_thread.o(.text.svcRtxThreadFlagsSet) for svcRtxThreadFlagsSet
+    rtx_thread.o(.ARM.exidx.text.osThreadFlagsSet) refers to rtx_thread.o(.text.osThreadFlagsSet) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadFlagsClear) refers to rtx_thread.o(.text.svcRtxThreadFlagsClear) for svcRtxThreadFlagsClear
+    rtx_thread.o(.ARM.exidx.text.osThreadFlagsClear) refers to rtx_thread.o(.text.osThreadFlagsClear) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadFlagsGet) refers to rtx_thread.o(.text.svcRtxThreadFlagsGet) for svcRtxThreadFlagsGet
+    rtx_thread.o(.ARM.exidx.text.osThreadFlagsGet) refers to rtx_thread.o(.text.osThreadFlagsGet) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadFlagsWait) refers to rtx_thread.o(.text.svcRtxThreadFlagsWait) for svcRtxThreadFlagsWait
+    rtx_thread.o(.ARM.exidx.text.osThreadFlagsWait) refers to rtx_thread.o(.text.osThreadFlagsWait) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadPostProcess) refers to rtx_thread.o(.text.ThreadFlagsCheck) for ThreadFlagsCheck
+    rtx_thread.o(.text.osRtxThreadPostProcess) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadPostProcess) refers to rtx_thread.o(.text.osRtxThreadPostProcess) for [Anonymous Symbol]
+    rtx_thread.o(.ARM.exidx.text.ThreadFlagsCheck) refers to rtx_thread.o(.text.ThreadFlagsCheck) for [Anonymous Symbol]
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetName) refers to rtx_thread.o(.text.svcRtxThreadGetName) for [Anonymous Symbol]
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetState) refers to rtx_thread.o(.text.svcRtxThreadGetState) for [Anonymous Symbol]
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetStackSize) refers to rtx_thread.o(.text.svcRtxThreadGetStackSize) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadGetStackSpace) refers to rtx_lib.o(.rodata) for osRtxConfig
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetStackSpace) refers to rtx_thread.o(.text.svcRtxThreadGetStackSpace) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadSetPriority) refers to rtx_thread.o(.text.osRtxThreadListSort) for osRtxThreadListSort
+    rtx_thread.o(.text.svcRtxThreadSetPriority) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadSetPriority) refers to rtx_thread.o(.text.svcRtxThreadSetPriority) for [Anonymous Symbol]
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetPriority) refers to rtx_thread.o(.text.svcRtxThreadGetPriority) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadYield) refers to rtx_thread.o(.text.osRtxThreadListRemove) for osRtxThreadListRemove
+    rtx_thread.o(.text.svcRtxThreadYield) refers to rtx_thread.o(.text.osRtxThreadReadyPut) for osRtxThreadReadyPut
+    rtx_thread.o(.text.svcRtxThreadYield) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadYield) refers to rtx_thread.o(.text.svcRtxThreadYield) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadSuspend) refers to rtx_thread.o(.text.osRtxThreadListRemove) for osRtxThreadListRemove
+    rtx_thread.o(.text.svcRtxThreadSuspend) refers to rtx_thread.o(.text.osRtxThreadDelayRemove) for osRtxThreadDelayRemove
+    rtx_thread.o(.text.svcRtxThreadSuspend) refers to rtx_thread.o(.text.osRtxThreadDelayInsert) for osRtxThreadDelayInsert
+    rtx_thread.o(.text.svcRtxThreadSuspend) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadSuspend) refers to rtx_thread.o(.text.svcRtxThreadSuspend) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadResume) refers to rtx_thread.o(.text.osRtxThreadListRemove) for osRtxThreadListRemove
+    rtx_thread.o(.text.svcRtxThreadResume) refers to rtx_thread.o(.text.osRtxThreadDelayRemove) for osRtxThreadDelayRemove
+    rtx_thread.o(.text.svcRtxThreadResume) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadResume) refers to rtx_thread.o(.text.svcRtxThreadResume) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadDetach) refers to rtx_thread.o(.text.osRtxThreadListUnlink) for osRtxThreadListUnlink
+    rtx_thread.o(.text.svcRtxThreadDetach) refers to rtx_thread.o(.text.osRtxThreadFree) for osRtxThreadFree
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadDetach) refers to rtx_thread.o(.text.svcRtxThreadDetach) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadListUnlink) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadListUnlink) refers to rtx_thread.o(.text.osRtxThreadListUnlink) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadFree) refers to rtx_memory.o(.text.osRtxMemoryFree) for osRtxMemoryFree
+    rtx_thread.o(.text.osRtxThreadFree) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_thread.o(.text.osRtxThreadFree) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadFree) refers to rtx_thread.o(.text.osRtxThreadFree) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadJoin) refers to rtx_thread.o(.text.osRtxThreadListUnlink) for osRtxThreadListUnlink
+    rtx_thread.o(.text.svcRtxThreadJoin) refers to rtx_thread.o(.text.osRtxThreadFree) for osRtxThreadFree
+    rtx_thread.o(.text.svcRtxThreadJoin) refers to rtx_thread.o(.text.osRtxThreadWaitEnter) for osRtxThreadWaitEnter
+    rtx_thread.o(.text.svcRtxThreadJoin) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadJoin) refers to rtx_thread.o(.text.svcRtxThreadJoin) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadExit) refers to rtx_mutex.o(.text.osRtxMutexOwnerRelease) for osRtxMutexOwnerRelease
+    rtx_thread.o(.text.svcRtxThreadExit) refers to rtx_thread.o(.text.osRtxThreadJoinWakeup) for osRtxThreadJoinWakeup
+    rtx_thread.o(.text.svcRtxThreadExit) refers to rtx_thread.o(.text.osRtxThreadDestroy) for osRtxThreadDestroy
+    rtx_thread.o(.text.svcRtxThreadExit) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadExit) refers to rtx_thread.o(.text.svcRtxThreadExit) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadJoinWakeup) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadJoinWakeup) refers to rtx_thread.o(.text.osRtxThreadJoinWakeup) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadDestroy) refers to rtx_thread.o(.text.osRtxThreadFree) for osRtxThreadFree
+    rtx_thread.o(.text.osRtxThreadDestroy) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadDestroy) refers to rtx_thread.o(.text.osRtxThreadDestroy) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadTerminate) refers to rtx_thread.o(.text.osRtxThreadListRemove) for osRtxThreadListRemove
+    rtx_thread.o(.text.svcRtxThreadTerminate) refers to rtx_thread.o(.text.osRtxThreadDelayRemove) for osRtxThreadDelayRemove
+    rtx_thread.o(.text.svcRtxThreadTerminate) refers to rtx_mutex.o(.text.osRtxMutexOwnerRelease) for osRtxMutexOwnerRelease
+    rtx_thread.o(.text.svcRtxThreadTerminate) refers to rtx_thread.o(.text.osRtxThreadJoinWakeup) for osRtxThreadJoinWakeup
+    rtx_thread.o(.text.svcRtxThreadTerminate) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_thread.o(.text.svcRtxThreadTerminate) refers to rtx_thread.o(.text.osRtxThreadDestroy) for osRtxThreadDestroy
+    rtx_thread.o(.text.svcRtxThreadTerminate) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadTerminate) refers to rtx_thread.o(.text.svcRtxThreadTerminate) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadGetCount) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetCount) refers to rtx_thread.o(.text.svcRtxThreadGetCount) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadEnumerate) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadEnumerate) refers to rtx_thread.o(.text.svcRtxThreadEnumerate) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadFlagsSet) refers to rtx_thread.o(.text.ThreadFlagsCheck) for ThreadFlagsCheck
+    rtx_thread.o(.text.svcRtxThreadFlagsSet) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadFlagsSet) refers to rtx_thread.o(.text.svcRtxThreadFlagsSet) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadFlagsClear) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadFlagsClear) refers to rtx_thread.o(.text.svcRtxThreadFlagsClear) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadFlagsGet) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadFlagsGet) refers to rtx_thread.o(.text.svcRtxThreadFlagsGet) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadFlagsWait) refers to rtx_thread.o(.text.ThreadFlagsCheck) for ThreadFlagsCheck
+    rtx_thread.o(.text.svcRtxThreadFlagsWait) refers to rtx_thread.o(.text.osRtxThreadWaitEnter) for osRtxThreadWaitEnter
+    rtx_thread.o(.text.svcRtxThreadFlagsWait) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadFlagsWait) refers to rtx_thread.o(.text.svcRtxThreadFlagsWait) for [Anonymous Symbol]
+    rtx_timer.o(.text.osRtxTimerSetup) refers to rtx_msgqueue.o(.text.osRtxMessageQueueTimerSetup) for osRtxMessageQueueTimerSetup
+    rtx_timer.o(.text.osRtxTimerSetup) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_timer.o(.text.osRtxTimerSetup) refers to rtx_timer.o(.text.osRtxTimerTick) for osRtxTimerTick
+    rtx_timer.o(.ARM.exidx.text.osRtxTimerSetup) refers to rtx_timer.o(.text.osRtxTimerSetup) for [Anonymous Symbol]
+    rtx_timer.o(.text.osRtxTimerTick) refers to rtx_msgqueue.o(.text.osMessageQueuePut) for osMessageQueuePut
+    rtx_timer.o(.text.osRtxTimerTick) refers to rtx_kernel.o(.text.osRtxKernelErrorNotify) for osRtxKernelErrorNotify
+    rtx_timer.o(.text.osRtxTimerTick) refers to rtx_timer.o(.text.TimerInsert) for TimerInsert
+    rtx_timer.o(.text.osRtxTimerTick) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_timer.o(.ARM.exidx.text.osRtxTimerTick) refers to rtx_timer.o(.text.osRtxTimerTick) for [Anonymous Symbol]
+    rtx_timer.o(.text.osRtxTimerThread) refers to rtx_msgqueue.o(.text.osMessageQueueGet) for osMessageQueueGet
+    rtx_timer.o(.ARM.exidx.text.osRtxTimerThread) refers to rtx_timer.o(.text.osRtxTimerThread) for [Anonymous Symbol]
+    rtx_timer.o(.text.osTimerNew) refers to rtx_timer.o(.text.svcRtxTimerNew) for svcRtxTimerNew
+    rtx_timer.o(.ARM.exidx.text.osTimerNew) refers to rtx_timer.o(.text.osTimerNew) for [Anonymous Symbol]
+    rtx_timer.o(.text.osTimerGetName) refers to rtx_timer.o(.text.svcRtxTimerGetName) for svcRtxTimerGetName
+    rtx_timer.o(.ARM.exidx.text.osTimerGetName) refers to rtx_timer.o(.text.osTimerGetName) for [Anonymous Symbol]
+    rtx_timer.o(.text.osTimerStart) refers to rtx_timer.o(.text.svcRtxTimerStart) for svcRtxTimerStart
+    rtx_timer.o(.ARM.exidx.text.osTimerStart) refers to rtx_timer.o(.text.osTimerStart) for [Anonymous Symbol]
+    rtx_timer.o(.text.osTimerStop) refers to rtx_timer.o(.text.svcRtxTimerStop) for svcRtxTimerStop
+    rtx_timer.o(.ARM.exidx.text.osTimerStop) refers to rtx_timer.o(.text.osTimerStop) for [Anonymous Symbol]
+    rtx_timer.o(.text.osTimerIsRunning) refers to rtx_timer.o(.text.svcRtxTimerIsRunning) for svcRtxTimerIsRunning
+    rtx_timer.o(.ARM.exidx.text.osTimerIsRunning) refers to rtx_timer.o(.text.osTimerIsRunning) for [Anonymous Symbol]
+    rtx_timer.o(.text.osTimerDelete) refers to rtx_timer.o(.text.svcRtxTimerDelete) for svcRtxTimerDelete
+    rtx_timer.o(.ARM.exidx.text.osTimerDelete) refers to rtx_timer.o(.text.osTimerDelete) for [Anonymous Symbol]
+    rtx_timer.o(.text.TimerInsert) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_timer.o(.ARM.exidx.text.TimerInsert) refers to rtx_timer.o(.text.TimerInsert) for [Anonymous Symbol]
+    rtx_timer.o(.text.svcRtxTimerNew) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_timer.o(.text.svcRtxTimerNew) refers to rtx_memory.o(.text.osRtxMemoryAlloc) for osRtxMemoryAlloc
+    rtx_timer.o(.text.svcRtxTimerNew) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_timer.o(.ARM.exidx.text.svcRtxTimerNew) refers to rtx_timer.o(.text.svcRtxTimerNew) for [Anonymous Symbol]
+    rtx_timer.o(.ARM.exidx.text.svcRtxTimerGetName) refers to rtx_timer.o(.text.svcRtxTimerGetName) for [Anonymous Symbol]
+    rtx_timer.o(.text.svcRtxTimerStart) refers to rtx_timer.o(.text.TimerRemove) for TimerRemove
+    rtx_timer.o(.text.svcRtxTimerStart) refers to rtx_timer.o(.text.TimerInsert) for TimerInsert
+    rtx_timer.o(.text.svcRtxTimerStart) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_timer.o(.ARM.exidx.text.svcRtxTimerStart) refers to rtx_timer.o(.text.svcRtxTimerStart) for [Anonymous Symbol]
+    rtx_timer.o(.text.TimerRemove) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_timer.o(.ARM.exidx.text.TimerRemove) refers to rtx_timer.o(.text.TimerRemove) for [Anonymous Symbol]
+    rtx_timer.o(.text.svcRtxTimerStop) refers to rtx_timer.o(.text.TimerRemove) for TimerRemove
+    rtx_timer.o(.ARM.exidx.text.svcRtxTimerStop) refers to rtx_timer.o(.text.svcRtxTimerStop) for [Anonymous Symbol]
+    rtx_timer.o(.ARM.exidx.text.svcRtxTimerIsRunning) refers to rtx_timer.o(.text.svcRtxTimerIsRunning) for [Anonymous Symbol]
+    rtx_timer.o(.text.svcRtxTimerDelete) refers to rtx_timer.o(.text.TimerRemove) for TimerRemove
+    rtx_timer.o(.text.svcRtxTimerDelete) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_timer.o(.text.svcRtxTimerDelete) refers to rtx_memory.o(.text.osRtxMemoryFree) for osRtxMemoryFree
+    rtx_timer.o(.text.svcRtxTimerDelete) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_timer.o(.ARM.exidx.text.svcRtxTimerDelete) refers to rtx_timer.o(.text.svcRtxTimerDelete) for [Anonymous Symbol]
+    irq_armv6m.o(.text) refers to rtx_system.o(.text.osRtxPendSV_Handler) for osRtxPendSV_Handler
+    irq_armv6m.o(.text) refers to rtx_system.o(.text.osRtxTick_Handler) for osRtxTick_Handler
+    irq_armv6m.o(.text) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    irq_armv6m.o(.text) refers to rtx_lib.o(.rodata.osRtxUserSVC) for osRtxUserSVC
+    irq_armv6m.o(.ARM.exidx) refers to irq_armv6m.o(.text) for [Anonymous Symbol]
+    rtx_mutex.o(.text.osRtxMutexOwnerRelease) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_mutex.o(.text.osRtxMutexOwnerRelease) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_mutex.o(.ARM.exidx.text.osRtxMutexOwnerRelease) refers to rtx_mutex.o(.text.osRtxMutexOwnerRelease) for [Anonymous Symbol]
+    rtx_mutex.o(.text.osRtxMutexOwnerRestore) refers to rtx_thread.o(.text.osRtxThreadListSort) for osRtxThreadListSort
+    rtx_mutex.o(.ARM.exidx.text.osRtxMutexOwnerRestore) refers to rtx_mutex.o(.text.osRtxMutexOwnerRestore) for [Anonymous Symbol]
+    rtx_mutex.o(.text.osMutexNew) refers to rtx_mutex.o(.text.svcRtxMutexNew) for svcRtxMutexNew
+    rtx_mutex.o(.ARM.exidx.text.osMutexNew) refers to rtx_mutex.o(.text.osMutexNew) for [Anonymous Symbol]
+    rtx_mutex.o(.text.osMutexGetName) refers to rtx_mutex.o(.text.svcRtxMutexGetName) for svcRtxMutexGetName
+    rtx_mutex.o(.ARM.exidx.text.osMutexGetName) refers to rtx_mutex.o(.text.osMutexGetName) for [Anonymous Symbol]
+    rtx_mutex.o(.text.osMutexAcquire) refers to rtx_mutex.o(.text.svcRtxMutexAcquire) for svcRtxMutexAcquire
+    rtx_mutex.o(.ARM.exidx.text.osMutexAcquire) refers to rtx_mutex.o(.text.osMutexAcquire) for [Anonymous Symbol]
+    rtx_mutex.o(.text.osMutexRelease) refers to rtx_mutex.o(.text.svcRtxMutexRelease) for svcRtxMutexRelease
+    rtx_mutex.o(.ARM.exidx.text.osMutexRelease) refers to rtx_mutex.o(.text.osMutexRelease) for [Anonymous Symbol]
+    rtx_mutex.o(.text.osMutexGetOwner) refers to rtx_mutex.o(.text.svcRtxMutexGetOwner) for svcRtxMutexGetOwner
+    rtx_mutex.o(.ARM.exidx.text.osMutexGetOwner) refers to rtx_mutex.o(.text.osMutexGetOwner) for [Anonymous Symbol]
+    rtx_mutex.o(.text.osMutexDelete) refers to rtx_mutex.o(.text.svcRtxMutexDelete) for svcRtxMutexDelete
+    rtx_mutex.o(.ARM.exidx.text.osMutexDelete) refers to rtx_mutex.o(.text.osMutexDelete) for [Anonymous Symbol]
+    rtx_mutex.o(.text.svcRtxMutexNew) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_mutex.o(.text.svcRtxMutexNew) refers to rtx_memory.o(.text.osRtxMemoryAlloc) for osRtxMemoryAlloc
+    rtx_mutex.o(.text.svcRtxMutexNew) refers to memseta.o(.text) for __aeabi_memclr4
+    rtx_mutex.o(.text.svcRtxMutexNew) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_mutex.o(.ARM.exidx.text.svcRtxMutexNew) refers to rtx_mutex.o(.text.svcRtxMutexNew) for [Anonymous Symbol]
+    rtx_mutex.o(.ARM.exidx.text.svcRtxMutexGetName) refers to rtx_mutex.o(.text.svcRtxMutexGetName) for [Anonymous Symbol]
+    rtx_mutex.o(.text.svcRtxMutexAcquire) refers to rtx_thread.o(.text.osRtxThreadListSort) for osRtxThreadListSort
+    rtx_mutex.o(.text.svcRtxMutexAcquire) refers to rtx_thread.o(.text.osRtxThreadWaitEnter) for osRtxThreadWaitEnter
+    rtx_mutex.o(.text.svcRtxMutexAcquire) refers to rtx_thread.o(.text.osRtxThreadListPut) for osRtxThreadListPut
+    rtx_mutex.o(.text.svcRtxMutexAcquire) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_mutex.o(.ARM.exidx.text.svcRtxMutexAcquire) refers to rtx_mutex.o(.text.svcRtxMutexAcquire) for [Anonymous Symbol]
+    rtx_mutex.o(.text.svcRtxMutexRelease) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_mutex.o(.text.svcRtxMutexRelease) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_mutex.o(.text.svcRtxMutexRelease) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_mutex.o(.text.svcRtxMutexRelease) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_mutex.o(.ARM.exidx.text.svcRtxMutexRelease) refers to rtx_mutex.o(.text.svcRtxMutexRelease) for [Anonymous Symbol]
+    rtx_mutex.o(.ARM.exidx.text.svcRtxMutexGetOwner) refers to rtx_mutex.o(.text.svcRtxMutexGetOwner) for [Anonymous Symbol]
+    rtx_mutex.o(.text.svcRtxMutexDelete) refers to rtx_thread.o(.text.osRtxThreadListSort) for osRtxThreadListSort
+    rtx_mutex.o(.text.svcRtxMutexDelete) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_mutex.o(.text.svcRtxMutexDelete) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_mutex.o(.text.svcRtxMutexDelete) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_mutex.o(.text.svcRtxMutexDelete) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_mutex.o(.text.svcRtxMutexDelete) refers to rtx_memory.o(.text.osRtxMemoryFree) for osRtxMemoryFree
+    rtx_mutex.o(.text.svcRtxMutexDelete) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_mutex.o(.ARM.exidx.text.svcRtxMutexDelete) refers to rtx_mutex.o(.text.svcRtxMutexDelete) for [Anonymous Symbol]
+    rtx_memory.o(.ARM.exidx.text.osRtxMemoryInit) refers to rtx_memory.o(.text.osRtxMemoryInit) for [Anonymous Symbol]
+    rtx_memory.o(.ARM.exidx.text.osRtxMemoryAlloc) refers to rtx_memory.o(.text.osRtxMemoryAlloc) for [Anonymous Symbol]
+    rtx_memory.o(.ARM.exidx.text.osRtxMemoryFree) refers to rtx_memory.o(.text.osRtxMemoryFree) for [Anonymous Symbol]
+    rtx_mempool.o(.ARM.exidx.text.osRtxMemoryPoolInit) refers to rtx_mempool.o(.text.osRtxMemoryPoolInit) for [Anonymous Symbol]
+    rtx_mempool.o(.ARM.exidx.text.osRtxMemoryPoolAlloc) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for [Anonymous Symbol]
+    rtx_mempool.o(.ARM.exidx.text.osRtxMemoryPoolFree) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for [Anonymous Symbol]
+    rtx_mempool.o(.text.osMemoryPoolNew) refers to rtx_mempool.o(.text.svcRtxMemoryPoolNew) for svcRtxMemoryPoolNew
+    rtx_mempool.o(.ARM.exidx.text.osMemoryPoolNew) refers to rtx_mempool.o(.text.osMemoryPoolNew) for [Anonymous Symbol]
+    rtx_mempool.o(.text.osMemoryPoolGetName) refers to rtx_mempool.o(.text.svcRtxMemoryPoolGetName) for svcRtxMemoryPoolGetName
+    rtx_mempool.o(.ARM.exidx.text.osMemoryPoolGetName) refers to rtx_mempool.o(.text.osMemoryPoolGetName) for [Anonymous Symbol]
+    rtx_mempool.o(.text.osMemoryPoolAlloc) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_mempool.o(.text.osMemoryPoolAlloc) refers to rtx_mempool.o(.text.svcRtxMemoryPoolAlloc) for svcRtxMemoryPoolAlloc
+    rtx_mempool.o(.ARM.exidx.text.osMemoryPoolAlloc) refers to rtx_mempool.o(.text.osMemoryPoolAlloc) for [Anonymous Symbol]
+    rtx_mempool.o(.text.osMemoryPoolFree) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_mempool.o(.text.osMemoryPoolFree) refers to rtx_system.o(.text.osRtxPostProcess) for osRtxPostProcess
+    rtx_mempool.o(.text.osMemoryPoolFree) refers to rtx_mempool.o(.text.svcRtxMemoryPoolFree) for svcRtxMemoryPoolFree
+    rtx_mempool.o(.ARM.exidx.text.osMemoryPoolFree) refers to rtx_mempool.o(.text.osMemoryPoolFree) for [Anonymous Symbol]
+    rtx_mempool.o(.text.osMemoryPoolGetCapacity) refers to rtx_mempool.o(.text.svcRtxMemoryPoolGetCapacity) for svcRtxMemoryPoolGetCapacity
+    rtx_mempool.o(.ARM.exidx.text.osMemoryPoolGetCapacity) refers to rtx_mempool.o(.text.osMemoryPoolGetCapacity) for [Anonymous Symbol]
+    rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolGetCapacity) refers to rtx_mempool.o(.text.svcRtxMemoryPoolGetCapacity) for [Anonymous Symbol]
+    rtx_mempool.o(.text.osMemoryPoolGetBlockSize) refers to rtx_mempool.o(.text.svcRtxMemoryPoolGetBlockSize) for svcRtxMemoryPoolGetBlockSize
+    rtx_mempool.o(.ARM.exidx.text.osMemoryPoolGetBlockSize) refers to rtx_mempool.o(.text.osMemoryPoolGetBlockSize) for [Anonymous Symbol]
+    rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolGetBlockSize) refers to rtx_mempool.o(.text.svcRtxMemoryPoolGetBlockSize) for [Anonymous Symbol]
+    rtx_mempool.o(.text.osMemoryPoolGetCount) refers to rtx_mempool.o(.text.svcRtxMemoryPoolGetCount) for svcRtxMemoryPoolGetCount
+    rtx_mempool.o(.ARM.exidx.text.osMemoryPoolGetCount) refers to rtx_mempool.o(.text.osMemoryPoolGetCount) for [Anonymous Symbol]
+    rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolGetCount) refers to rtx_mempool.o(.text.svcRtxMemoryPoolGetCount) for [Anonymous Symbol]
+    rtx_mempool.o(.text.osMemoryPoolGetSpace) refers to rtx_mempool.o(.text.svcRtxMemoryPoolGetSpace) for svcRtxMemoryPoolGetSpace
+    rtx_mempool.o(.ARM.exidx.text.osMemoryPoolGetSpace) refers to rtx_mempool.o(.text.osMemoryPoolGetSpace) for [Anonymous Symbol]
+    rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolGetSpace) refers to rtx_mempool.o(.text.svcRtxMemoryPoolGetSpace) for [Anonymous Symbol]
+    rtx_mempool.o(.text.osMemoryPoolDelete) refers to rtx_mempool.o(.text.svcRtxMemoryPoolDelete) for svcRtxMemoryPoolDelete
+    rtx_mempool.o(.ARM.exidx.text.osMemoryPoolDelete) refers to rtx_mempool.o(.text.osMemoryPoolDelete) for [Anonymous Symbol]
+    rtx_mempool.o(.text.svcRtxMemoryPoolNew) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_mempool.o(.text.svcRtxMemoryPoolNew) refers to rtx_memory.o(.text.osRtxMemoryAlloc) for osRtxMemoryAlloc
+    rtx_mempool.o(.text.svcRtxMemoryPoolNew) refers to memseta.o(.text) for __aeabi_memclr
+    rtx_mempool.o(.text.svcRtxMemoryPoolNew) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_mempool.o(.text.svcRtxMemoryPoolNew) refers to rtx_memory.o(.text.osRtxMemoryFree) for osRtxMemoryFree
+    rtx_mempool.o(.text.svcRtxMemoryPoolNew) refers to rtx_mempool.o(.text.osRtxMemoryPoolInit) for osRtxMemoryPoolInit
+    rtx_mempool.o(.text.svcRtxMemoryPoolNew) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_mempool.o(.text.svcRtxMemoryPoolNew) refers to rtx_mempool.o(.text.osRtxMemoryPoolPostProcess) for osRtxMemoryPoolPostProcess
+    rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolNew) refers to rtx_mempool.o(.text.svcRtxMemoryPoolNew) for [Anonymous Symbol]
+    rtx_mempool.o(.text.osRtxMemoryPoolPostProcess) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_mempool.o(.text.osRtxMemoryPoolPostProcess) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_mempool.o(.text.osRtxMemoryPoolPostProcess) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_mempool.o(.ARM.exidx.text.osRtxMemoryPoolPostProcess) refers to rtx_mempool.o(.text.osRtxMemoryPoolPostProcess) for [Anonymous Symbol]
+    rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolGetName) refers to rtx_mempool.o(.text.svcRtxMemoryPoolGetName) for [Anonymous Symbol]
+    rtx_mempool.o(.text.svcRtxMemoryPoolAlloc) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_mempool.o(.text.svcRtxMemoryPoolAlloc) refers to rtx_thread.o(.text.osRtxThreadWaitEnter) for osRtxThreadWaitEnter
+    rtx_mempool.o(.text.svcRtxMemoryPoolAlloc) refers to rtx_thread.o(.text.osRtxThreadListPut) for osRtxThreadListPut
+    rtx_mempool.o(.text.svcRtxMemoryPoolAlloc) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolAlloc) refers to rtx_mempool.o(.text.svcRtxMemoryPoolAlloc) for [Anonymous Symbol]
+    rtx_mempool.o(.text.svcRtxMemoryPoolFree) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_mempool.o(.text.svcRtxMemoryPoolFree) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_mempool.o(.text.svcRtxMemoryPoolFree) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_mempool.o(.text.svcRtxMemoryPoolFree) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolFree) refers to rtx_mempool.o(.text.svcRtxMemoryPoolFree) for [Anonymous Symbol]
+    rtx_mempool.o(.text.svcRtxMemoryPoolDelete) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_mempool.o(.text.svcRtxMemoryPoolDelete) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_mempool.o(.text.svcRtxMemoryPoolDelete) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_mempool.o(.text.svcRtxMemoryPoolDelete) refers to rtx_memory.o(.text.osRtxMemoryFree) for osRtxMemoryFree
+    rtx_mempool.o(.text.svcRtxMemoryPoolDelete) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_mempool.o(.text.svcRtxMemoryPoolDelete) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolDelete) refers to rtx_mempool.o(.text.svcRtxMemoryPoolDelete) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osRtxMessageQueueTimerSetup) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueNew) for svcRtxMessageQueueNew
+    rtx_msgqueue.o(.text.osRtxMessageQueueTimerSetup) refers to rtx_lib.o(.rodata) for osRtxConfig
+    rtx_msgqueue.o(.text.osRtxMessageQueueTimerSetup) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_msgqueue.o(.ARM.exidx.text.osRtxMessageQueueTimerSetup) refers to rtx_msgqueue.o(.text.osRtxMessageQueueTimerSetup) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.svcRtxMessageQueueNew) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_msgqueue.o(.text.svcRtxMessageQueueNew) refers to rtx_memory.o(.text.osRtxMemoryAlloc) for osRtxMemoryAlloc
+    rtx_msgqueue.o(.text.svcRtxMessageQueueNew) refers to memseta.o(.text) for __aeabi_memclr
+    rtx_msgqueue.o(.text.svcRtxMessageQueueNew) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_msgqueue.o(.text.svcRtxMessageQueueNew) refers to rtx_memory.o(.text.osRtxMemoryFree) for osRtxMemoryFree
+    rtx_msgqueue.o(.text.svcRtxMessageQueueNew) refers to rtx_mempool.o(.text.osRtxMemoryPoolInit) for osRtxMemoryPoolInit
+    rtx_msgqueue.o(.text.svcRtxMessageQueueNew) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_msgqueue.o(.text.svcRtxMessageQueueNew) refers to rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess) for osRtxMessageQueuePostProcess
+    rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueNew) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueNew) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osMessageQueueNew) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueNew) for svcRtxMessageQueueNew
+    rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueNew) refers to rtx_msgqueue.o(.text.osMessageQueueNew) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osMessageQueueGetName) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGetName) for svcRtxMessageQueueGetName
+    rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGetName) refers to rtx_msgqueue.o(.text.osMessageQueueGetName) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osMessageQueuePut) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_msgqueue.o(.text.osMessageQueuePut) refers to memcpya.o(.text) for __aeabi_memcpy
+    rtx_msgqueue.o(.text.osMessageQueuePut) refers to rtx_system.o(.text.osRtxPostProcess) for osRtxPostProcess
+    rtx_msgqueue.o(.text.osMessageQueuePut) refers to rtx_msgqueue.o(.text.svcRtxMessageQueuePut) for svcRtxMessageQueuePut
+    rtx_msgqueue.o(.ARM.exidx.text.osMessageQueuePut) refers to rtx_msgqueue.o(.text.osMessageQueuePut) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osMessageQueueGet) refers to rtx_msgqueue.o(.text.MessageQueueGet) for MessageQueueGet
+    rtx_msgqueue.o(.text.osMessageQueueGet) refers to memcpya.o(.text) for __aeabi_memcpy
+    rtx_msgqueue.o(.text.osMessageQueueGet) refers to rtx_system.o(.text.osRtxPostProcess) for osRtxPostProcess
+    rtx_msgqueue.o(.text.osMessageQueueGet) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGet) for svcRtxMessageQueueGet
+    rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGet) refers to rtx_msgqueue.o(.text.osMessageQueueGet) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osMessageQueueGetCapacity) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGetCapacity) for svcRtxMessageQueueGetCapacity
+    rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGetCapacity) refers to rtx_msgqueue.o(.text.osMessageQueueGetCapacity) for [Anonymous Symbol]
+    rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGetCapacity) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGetCapacity) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osMessageQueueGetMsgSize) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGetMsgSize) for svcRtxMessageQueueGetMsgSize
+    rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGetMsgSize) refers to rtx_msgqueue.o(.text.osMessageQueueGetMsgSize) for [Anonymous Symbol]
+    rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGetMsgSize) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGetMsgSize) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osMessageQueueGetCount) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGetCount) for svcRtxMessageQueueGetCount
+    rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGetCount) refers to rtx_msgqueue.o(.text.osMessageQueueGetCount) for [Anonymous Symbol]
+    rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGetCount) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGetCount) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osMessageQueueGetSpace) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGetSpace) for svcRtxMessageQueueGetSpace
+    rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGetSpace) refers to rtx_msgqueue.o(.text.osMessageQueueGetSpace) for [Anonymous Symbol]
+    rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGetSpace) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGetSpace) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osMessageQueueReset) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueReset) for svcRtxMessageQueueReset
+    rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueReset) refers to rtx_msgqueue.o(.text.osMessageQueueReset) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osMessageQueueDelete) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueDelete) for svcRtxMessageQueueDelete
+    rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueDelete) refers to rtx_msgqueue.o(.text.osMessageQueueDelete) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess) refers to rtx_msgqueue.o(.text.MessageQueueRemove) for MessageQueueRemove
+    rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess) refers to rtx_thread.o(.text.osRtxThreadRegPtr) for osRtxThreadRegPtr
+    rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess) refers to memcpya.o(.text) for __aeabi_memcpy
+    rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess) refers to rtx_msgqueue.o(.text.MessageQueuePut) for MessageQueuePut
+    rtx_msgqueue.o(.ARM.exidx.text.osRtxMessageQueuePostProcess) refers to rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess) for [Anonymous Symbol]
+    rtx_msgqueue.o(.ARM.exidx.text.MessageQueueRemove) refers to rtx_msgqueue.o(.text.MessageQueueRemove) for [Anonymous Symbol]
+    rtx_msgqueue.o(.ARM.exidx.text.MessageQueuePut) refers to rtx_msgqueue.o(.text.MessageQueuePut) for [Anonymous Symbol]
+    rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGetName) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGetName) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.svcRtxMessageQueuePut) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_msgqueue.o(.text.svcRtxMessageQueuePut) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_msgqueue.o(.text.svcRtxMessageQueuePut) refers to rtx_thread.o(.text.osRtxThreadRegPtr) for osRtxThreadRegPtr
+    rtx_msgqueue.o(.text.svcRtxMessageQueuePut) refers to memcpya.o(.text) for __aeabi_memcpy
+    rtx_msgqueue.o(.text.svcRtxMessageQueuePut) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_msgqueue.o(.text.svcRtxMessageQueuePut) refers to rtx_msgqueue.o(.text.MessageQueuePut) for MessageQueuePut
+    rtx_msgqueue.o(.text.svcRtxMessageQueuePut) refers to rtx_thread.o(.text.osRtxThreadWaitEnter) for osRtxThreadWaitEnter
+    rtx_msgqueue.o(.text.svcRtxMessageQueuePut) refers to rtx_thread.o(.text.osRtxThreadListPut) for osRtxThreadListPut
+    rtx_msgqueue.o(.text.svcRtxMessageQueuePut) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueuePut) refers to rtx_msgqueue.o(.text.svcRtxMessageQueuePut) for [Anonymous Symbol]
+    rtx_msgqueue.o(.ARM.exidx.text.MessageQueueGet) refers to rtx_msgqueue.o(.text.MessageQueueGet) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rtx_msgqueue.o(.text.MessageQueueGet) for MessageQueueGet
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rtx_msgqueue.o(.text.MessageQueueRemove) for MessageQueueRemove
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to memcpya.o(.text) for __aeabi_memcpy
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rtx_thread.o(.text.osRtxThreadRegPtr) for osRtxThreadRegPtr
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rtx_msgqueue.o(.text.MessageQueuePut) for MessageQueuePut
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rtx_thread.o(.text.osRtxThreadWaitEnter) for osRtxThreadWaitEnter
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rtx_thread.o(.text.osRtxThreadListPut) for osRtxThreadListPut
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGet) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGet) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.svcRtxMessageQueueReset) refers to rtx_msgqueue.o(.text.MessageQueueGet) for MessageQueueGet
+    rtx_msgqueue.o(.text.svcRtxMessageQueueReset) refers to rtx_msgqueue.o(.text.MessageQueueRemove) for MessageQueueRemove
+    rtx_msgqueue.o(.text.svcRtxMessageQueueReset) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_msgqueue.o(.text.svcRtxMessageQueueReset) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_msgqueue.o(.text.svcRtxMessageQueueReset) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_msgqueue.o(.text.svcRtxMessageQueueReset) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_msgqueue.o(.text.svcRtxMessageQueueReset) refers to rtx_thread.o(.text.osRtxThreadRegPtr) for osRtxThreadRegPtr
+    rtx_msgqueue.o(.text.svcRtxMessageQueueReset) refers to memcpya.o(.text) for __aeabi_memcpy
+    rtx_msgqueue.o(.text.svcRtxMessageQueueReset) refers to rtx_msgqueue.o(.text.MessageQueuePut) for MessageQueuePut
+    rtx_msgqueue.o(.text.svcRtxMessageQueueReset) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueReset) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueReset) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.svcRtxMessageQueueDelete) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_msgqueue.o(.text.svcRtxMessageQueueDelete) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_msgqueue.o(.text.svcRtxMessageQueueDelete) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_msgqueue.o(.text.svcRtxMessageQueueDelete) refers to rtx_memory.o(.text.osRtxMemoryFree) for osRtxMemoryFree
+    rtx_msgqueue.o(.text.svcRtxMessageQueueDelete) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_msgqueue.o(.text.svcRtxMessageQueueDelete) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueDelete) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueDelete) for [Anonymous Symbol]
+    rtx_system.o(.text.osRtxTick_Handler) refers to os_systick.o(.text.OS_Tick_AcknowledgeIRQ) for OS_Tick_AcknowledgeIRQ
+    rtx_system.o(.text.osRtxTick_Handler) refers to rtx_thread.o(.text.osRtxThreadDelayTick) for osRtxThreadDelayTick
+    rtx_system.o(.text.osRtxTick_Handler) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_system.o(.text.osRtxTick_Handler) refers to rtx_thread.o(.text.osRtxThreadListRemove) for osRtxThreadListRemove
+    rtx_system.o(.text.osRtxTick_Handler) refers to rtx_thread.o(.text.osRtxThreadReadyPut) for osRtxThreadReadyPut
+    rtx_system.o(.text.osRtxTick_Handler) refers to rtx_thread.o(.text.osRtxThreadSwitch) for osRtxThreadSwitch
+    rtx_system.o(.text.osRtxTick_Handler) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_system.o(.ARM.exidx.text.osRtxTick_Handler) refers to rtx_system.o(.text.osRtxTick_Handler) for [Anonymous Symbol]
+    rtx_system.o(.text.osRtxPendSV_Handler) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_system.o(.text.osRtxPendSV_Handler) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_system.o(.ARM.exidx.text.osRtxPendSV_Handler) refers to rtx_system.o(.text.osRtxPendSV_Handler) for [Anonymous Symbol]
+    rtx_system.o(.text.osRtxPostProcess) refers to rtx_kernel.o(.text.osRtxKernelErrorNotify) for osRtxKernelErrorNotify
+    rtx_system.o(.text.osRtxPostProcess) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_system.o(.ARM.exidx.text.osRtxPostProcess) refers to rtx_system.o(.text.osRtxPostProcess) for [Anonymous Symbol]
+    os_systick.o(.text.OS_Tick_Setup) refers to uidiv_div0.o(.text) for __aeabi_uidiv
+    os_systick.o(.text.OS_Tick_Setup) refers to system_mkl25z4.o(.data.SystemCoreClock) for SystemCoreClock
+    os_systick.o(.text.OS_Tick_Setup) refers to os_systick.o(.bss.os) for [Anonymous Symbol]
+    os_systick.o(.ARM.exidx.text.OS_Tick_Setup) refers to os_systick.o(.text.OS_Tick_Setup) for [Anonymous Symbol]
+    os_systick.o(.text.OS_Tick_Enable) refers to os_systick.o(.bss.os) for [Anonymous Symbol]
+    os_systick.o(.ARM.exidx.text.OS_Tick_Enable) refers to os_systick.o(.text.OS_Tick_Enable) for [Anonymous Symbol]
+    os_systick.o(.text.OS_Tick_Disable) refers to os_systick.o(.bss.os) for [Anonymous Symbol]
+    os_systick.o(.ARM.exidx.text.OS_Tick_Disable) refers to os_systick.o(.text.OS_Tick_Disable) for [Anonymous Symbol]
+    os_systick.o(.ARM.exidx.text.OS_Tick_AcknowledgeIRQ) refers to os_systick.o(.text.OS_Tick_AcknowledgeIRQ) for [Anonymous Symbol]
+    os_systick.o(.ARM.exidx.text.OS_Tick_GetIRQn) refers to os_systick.o(.text.OS_Tick_GetIRQn) for [Anonymous Symbol]
+    os_systick.o(.text.OS_Tick_GetClock) refers to system_mkl25z4.o(.data.SystemCoreClock) for SystemCoreClock
+    os_systick.o(.ARM.exidx.text.OS_Tick_GetClock) refers to os_systick.o(.text.OS_Tick_GetClock) for [Anonymous Symbol]
+    os_systick.o(.ARM.exidx.text.OS_Tick_GetInterval) refers to os_systick.o(.text.OS_Tick_GetInterval) for [Anonymous Symbol]
+    os_systick.o(.ARM.exidx.text.OS_Tick_GetCount) refers to os_systick.o(.text.OS_Tick_GetCount) for [Anonymous Symbol]
+    os_systick.o(.ARM.exidx.text.OS_Tick_GetOverflow) refers to os_systick.o(.text.OS_Tick_GetOverflow) for [Anonymous Symbol]
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    idiv.o(.text) refers to uidiv_div0.o(.text) for __aeabi_uidivmod
+    fmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fdiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fdiv.o(.text) refers to fepilogue.o(.text) for _float_round
+    fcmpeq.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ffixi.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_mkl25z4.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_mkl25z4.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(.text.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(.text.main) for main
+    idiv_div0.o(.text) refers to uidiv_div0.o(.text) for __aeabi_uidivmod
+    fepilogue.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing main.o(.text), (0 bytes).
+    Removing main.o(.ARM.exidx.text.Init_UART2), (8 bytes).
+    Removing main.o(.ARM.exidx.text.__NVIC_ClearPendingIRQ), (8 bytes).
+    Removing main.o(.ARM.exidx.text.__NVIC_EnableIRQ), (8 bytes).
+    Removing main.o(.ARM.exidx.text.UART2_IRQHandler), (8 bytes).
+    Removing main.o(.text.Direction_convert), (52 bytes).
+    Removing main.o(.ARM.exidx.text.Direction_convert), (8 bytes).
+    Removing main.o(.ARM.exidx.text.Init_PWN), (8 bytes).
+    Removing main.o(.text.playNote), (88 bytes).
+    Removing main.o(.ARM.exidx.text.playNote), (8 bytes).
+    Removing main.o(.text.delay), (28 bytes).
+    Removing main.o(.ARM.exidx.text.delay), (8 bytes).
+    Removing main.o(.text.playHappyBirthday), (32 bytes).
+    Removing main.o(.ARM.exidx.text.playHappyBirthday), (8 bytes).
+    Removing main.o(.text.playEndSong), (2 bytes).
+    Removing main.o(.ARM.exidx.text.playEndSong), (8 bytes).
+    Removing main.o(.text.PWM01_forward), (28 bytes).
+    Removing main.o(.ARM.exidx.text.PWM01_forward), (8 bytes).
+    Removing main.o(.text.PWM01_back), (28 bytes).
+    Removing main.o(.ARM.exidx.text.PWM01_back), (8 bytes).
+    Removing main.o(.text.PWM01_rest), (16 bytes).
+    Removing main.o(.ARM.exidx.text.PWM01_rest), (8 bytes).
+    Removing main.o(.text.PWM23_forward), (28 bytes).
+    Removing main.o(.ARM.exidx.text.PWM23_forward), (8 bytes).
+    Removing main.o(.text.PWM23_back), (28 bytes).
+    Removing main.o(.ARM.exidx.text.PWM23_back), (8 bytes).
+    Removing main.o(.text.PWM23_rest), (16 bytes).
+    Removing main.o(.ARM.exidx.text.PWM23_rest), (8 bytes).
+    Removing main.o(.text.Motor_Control), (92 bytes).
+    Removing main.o(.ARM.exidx.text.Motor_Control), (8 bytes).
+    Removing main.o(.ARM.exidx.text.Init_PIT), (8 bytes).
+    Removing main.o(.ARM.exidx.text.PIT_IRQHandler), (8 bytes).
+    Removing main.o(.ARM.exidx.text.Red_LED_Control), (8 bytes).
+    Removing main.o(.ARM.exidx.text.Green_LED_Control), (8 bytes).
+    Removing main.o(.ARM.exidx.text.Red_LED_thread), (8 bytes).
+    Removing main.o(.ARM.exidx.text.Green_LED_thread), (8 bytes).
+    Removing main.o(.ARM.exidx.text.main), (8 bytes).
+    Removing main.o(.bss.counter), (4 bytes).
+    Removing main.o(.bss.tone), (4 bytes).
+    Removing main.o(.rodata..L__const.playHappyBirthday.notes), (116 bytes).
+    Removing main.o(.rodata..L__const.playHappyBirthday.durations), (116 bytes).
+    Removing main.o(.ARM.use_no_argv), (4 bytes).
+    Removing rtx_config.o(.text), (0 bytes).
+    Removing rtx_config.o(.ARM.exidx.text.osRtxIdleThread), (8 bytes).
+    Removing rtx_config.o(.ARM.exidx.text.osRtxErrorNotify), (8 bytes).
+    Removing rtx_lib.o(.text), (0 bytes).
+    Removing rtx_lib.o(.rodata.irqRtxLibRef), (4 bytes).
+    Removing startup_mkl25z4.o(HEAP), (0 bytes).
+    Removing system_mkl25z4.o(.text), (0 bytes).
+    Removing system_mkl25z4.o(.ARM.exidx.text.SystemInit), (8 bytes).
+    Removing system_mkl25z4.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
+    Removing rtx_kernel.o(.text), (0 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osRtxKernelPreInit), (8 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osRtxKernelErrorNotify), (8 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelInitialize), (8 bytes).
+    Removing rtx_kernel.o(.text.osKernelGetInfo), (44 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelGetInfo), (8 bytes).
+    Removing rtx_kernel.o(.text.svcRtxKernelGetInfo), (56 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetInfo), (8 bytes).
+    Removing rtx_kernel.o(.text.osKernelGetState), (48 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelGetState), (8 bytes).
+    Removing rtx_kernel.o(.text.svcRtxKernelGetState), (12 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetState), (8 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelStart), (8 bytes).
+    Removing rtx_kernel.o(.text.osKernelLock), (36 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelLock), (8 bytes).
+    Removing rtx_kernel.o(.text.osKernelUnlock), (36 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelUnlock), (8 bytes).
+    Removing rtx_kernel.o(.text.osKernelRestoreLock), (40 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelRestoreLock), (8 bytes).
+    Removing rtx_kernel.o(.text.osKernelSuspend), (32 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelSuspend), (8 bytes).
+    Removing rtx_kernel.o(.text.osKernelResume), (32 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelResume), (8 bytes).
+    Removing rtx_kernel.o(.text.osKernelGetTickCount), (40 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelGetTickCount), (8 bytes).
+    Removing rtx_kernel.o(.text.svcRtxKernelGetTickCount), (12 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetTickCount), (8 bytes).
+    Removing rtx_kernel.o(.text.osKernelGetTickFreq), (40 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelGetTickFreq), (8 bytes).
+    Removing rtx_kernel.o(.text.svcRtxKernelGetTickFreq), (12 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetTickFreq), (8 bytes).
+    Removing rtx_kernel.o(.text.osKernelGetSysTimerCount), (36 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelGetSysTimerCount), (8 bytes).
+    Removing rtx_kernel.o(.text.svcRtxKernelGetSysTimerCount), (44 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetSysTimerCount), (8 bytes).
+    Removing rtx_kernel.o(.text.osKernelGetSysTimerFreq), (36 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelGetSysTimerFreq), (8 bytes).
+    Removing rtx_kernel.o(.text.svcRtxKernelGetSysTimerFreq), (8 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetSysTimerFreq), (8 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelInitialize), (8 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelStart), (8 bytes).
+    Removing rtx_kernel.o(.text.svcRtxKernelLock), (36 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelLock), (8 bytes).
+    Removing rtx_kernel.o(.text.svcRtxKernelUnlock), (36 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelUnlock), (8 bytes).
+    Removing rtx_kernel.o(.text.svcRtxKernelRestoreLock), (48 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelRestoreLock), (8 bytes).
+    Removing rtx_kernel.o(.text.svcRtxKernelSuspend), (60 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelSuspend), (8 bytes).
+    Removing rtx_kernel.o(.text.GetKernelSleepTime), (40 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.GetKernelSleepTime), (8 bytes).
+    Removing rtx_kernel.o(.text.svcRtxKernelResume), (128 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelResume), (8 bytes).
+    Removing rtx_thread.o(.text), (0 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadListPut), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadListGet), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadListSort), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadListRemove), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadReadyPut), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadDelayTick), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadRegPtr), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadSwitch), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadDispatch), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadBlock), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadWaitExit), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadDelayRemove), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadWaitEnter), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadDelayInsert), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadStartup), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadNew), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadNew), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadGetName), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadGetName), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadGetId), (40 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadGetId), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadGetId), (12 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetId), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadGetState), (40 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadGetState), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadGetStackSize), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadGetStackSize), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadGetStackSpace), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadGetStackSpace), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadSetPriority), (40 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadSetPriority), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadGetPriority), (40 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadGetPriority), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadYield), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadYield), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadSuspend), (40 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadSuspend), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadResume), (40 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadResume), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadDetach), (40 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadDetach), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadJoin), (40 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadJoin), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadExit), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadTerminate), (40 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadTerminate), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadGetCount), (32 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadGetCount), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadEnumerate), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadEnumerate), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadFlagsSet), (84 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadFlagsSet), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadFlagsClear), (40 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadFlagsClear), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadFlagsGet), (32 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadFlagsGet), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadFlagsWait), (40 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadFlagsWait), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadPostProcess), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.ThreadFlagsCheck), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadGetName), (18 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetName), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadGetState), (24 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetState), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadGetStackSize), (18 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetStackSize), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadGetStackSpace), (68 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetStackSpace), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadSetPriority), (70 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadSetPriority), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadGetPriority), (28 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetPriority), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadYield), (56 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadYield), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadSuspend), (132 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadSuspend), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadResume), (54 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadResume), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadDetach), (58 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadDetach), (8 bytes).
+    Removing rtx_thread.o(.text.osRtxThreadListUnlink), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadListUnlink), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadFree), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadJoin), (92 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadJoin), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadExit), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadJoinWakeup), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadDestroy), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadTerminate), (152 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadTerminate), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadGetCount), (56 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetCount), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadEnumerate), (96 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadEnumerate), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadFlagsSet), (104 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadFlagsSet), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadFlagsClear), (52 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadFlagsClear), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadFlagsGet), (20 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadFlagsGet), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadFlagsWait), (80 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadFlagsWait), (8 bytes).
+    Removing rtx_timer.o(.text), (0 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.osRtxTimerSetup), (8 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.osRtxTimerTick), (8 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.osRtxTimerThread), (8 bytes).
+    Removing rtx_timer.o(.text.osTimerNew), (36 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.osTimerNew), (8 bytes).
+    Removing rtx_timer.o(.text.osTimerGetName), (36 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.osTimerGetName), (8 bytes).
+    Removing rtx_timer.o(.text.osTimerStart), (40 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.osTimerStart), (8 bytes).
+    Removing rtx_timer.o(.text.osTimerStop), (40 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.osTimerStop), (8 bytes).
+    Removing rtx_timer.o(.text.osTimerIsRunning), (36 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.osTimerIsRunning), (8 bytes).
+    Removing rtx_timer.o(.text.osTimerDelete), (40 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.osTimerDelete), (8 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.TimerInsert), (8 bytes).
+    Removing rtx_timer.o(.text.svcRtxTimerNew), (132 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.svcRtxTimerNew), (8 bytes).
+    Removing rtx_timer.o(.text.svcRtxTimerGetName), (18 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.svcRtxTimerGetName), (8 bytes).
+    Removing rtx_timer.o(.text.svcRtxTimerStart), (76 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.svcRtxTimerStart), (8 bytes).
+    Removing rtx_timer.o(.text.TimerRemove), (40 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.TimerRemove), (8 bytes).
+    Removing rtx_timer.o(.text.svcRtxTimerStop), (42 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.svcRtxTimerStop), (8 bytes).
+    Removing rtx_timer.o(.text.svcRtxTimerIsRunning), (24 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.svcRtxTimerIsRunning), (8 bytes).
+    Removing rtx_timer.o(.text.svcRtxTimerDelete), (76 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.svcRtxTimerDelete), (8 bytes).
+    Removing irq_armv6m.o(.rodata), (1 bytes).
+    Removing irq_armv6m.o(.ARM.exidx), (24 bytes).
+    Removing rtx_mutex.o(.text), (0 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.osRtxMutexOwnerRelease), (8 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.osRtxMutexOwnerRestore), (8 bytes).
+    Removing rtx_mutex.o(.text.osMutexNew), (36 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.osMutexNew), (8 bytes).
+    Removing rtx_mutex.o(.text.osMutexGetName), (36 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.osMutexGetName), (8 bytes).
+    Removing rtx_mutex.o(.text.osMutexAcquire), (40 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.osMutexAcquire), (8 bytes).
+    Removing rtx_mutex.o(.text.osMutexRelease), (40 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.osMutexRelease), (8 bytes).
+    Removing rtx_mutex.o(.text.osMutexGetOwner), (36 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.osMutexGetOwner), (8 bytes).
+    Removing rtx_mutex.o(.text.osMutexDelete), (40 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.osMutexDelete), (8 bytes).
+    Removing rtx_mutex.o(.text.svcRtxMutexNew), (112 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.svcRtxMutexNew), (8 bytes).
+    Removing rtx_mutex.o(.text.svcRtxMutexGetName), (18 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.svcRtxMutexGetName), (8 bytes).
+    Removing rtx_mutex.o(.text.svcRtxMutexAcquire), (152 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.svcRtxMutexAcquire), (8 bytes).
+    Removing rtx_mutex.o(.text.svcRtxMutexRelease), (188 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.svcRtxMutexRelease), (8 bytes).
+    Removing rtx_mutex.o(.text.svcRtxMutexGetOwner), (24 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.svcRtxMutexGetOwner), (8 bytes).
+    Removing rtx_mutex.o(.text.svcRtxMutexDelete), (180 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.svcRtxMutexDelete), (8 bytes).
+    Removing rtx_memory.o(.text), (0 bytes).
+    Removing rtx_memory.o(.ARM.exidx.text.osRtxMemoryInit), (8 bytes).
+    Removing rtx_memory.o(.ARM.exidx.text.osRtxMemoryAlloc), (8 bytes).
+    Removing rtx_memory.o(.ARM.exidx.text.osRtxMemoryFree), (8 bytes).
+    Removing rtx_mempool.o(.text), (0 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osRtxMemoryPoolInit), (8 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osRtxMemoryPoolAlloc), (8 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osRtxMemoryPoolFree), (8 bytes).
+    Removing rtx_mempool.o(.text.osMemoryPoolNew), (36 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osMemoryPoolNew), (8 bytes).
+    Removing rtx_mempool.o(.text.osMemoryPoolGetName), (36 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osMemoryPoolGetName), (8 bytes).
+    Removing rtx_mempool.o(.text.osMemoryPoolAlloc), (56 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osMemoryPoolAlloc), (8 bytes).
+    Removing rtx_mempool.o(.text.osMemoryPoolFree), (72 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osMemoryPoolFree), (8 bytes).
+    Removing rtx_mempool.o(.text.osMemoryPoolGetCapacity), (48 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osMemoryPoolGetCapacity), (8 bytes).
+    Removing rtx_mempool.o(.text.svcRtxMemoryPoolGetCapacity), (18 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolGetCapacity), (8 bytes).
+    Removing rtx_mempool.o(.text.osMemoryPoolGetBlockSize), (48 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osMemoryPoolGetBlockSize), (8 bytes).
+    Removing rtx_mempool.o(.text.svcRtxMemoryPoolGetBlockSize), (18 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolGetBlockSize), (8 bytes).
+    Removing rtx_mempool.o(.text.osMemoryPoolGetCount), (48 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osMemoryPoolGetCount), (8 bytes).
+    Removing rtx_mempool.o(.text.svcRtxMemoryPoolGetCount), (18 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolGetCount), (8 bytes).
+    Removing rtx_mempool.o(.text.osMemoryPoolGetSpace), (36 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osMemoryPoolGetSpace), (8 bytes).
+    Removing rtx_mempool.o(.text.svcRtxMemoryPoolGetSpace), (22 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolGetSpace), (8 bytes).
+    Removing rtx_mempool.o(.text.osMemoryPoolDelete), (40 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osMemoryPoolDelete), (8 bytes).
+    Removing rtx_mempool.o(.text.svcRtxMemoryPoolNew), (432 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolNew), (8 bytes).
+    Removing rtx_mempool.o(.text.osRtxMemoryPoolPostProcess), (40 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osRtxMemoryPoolPostProcess), (8 bytes).
+    Removing rtx_mempool.o(.text.svcRtxMemoryPoolGetName), (18 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolGetName), (8 bytes).
+    Removing rtx_mempool.o(.text.svcRtxMemoryPoolAlloc), (64 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolAlloc), (8 bytes).
+    Removing rtx_mempool.o(.text.svcRtxMemoryPoolFree), (72 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolFree), (8 bytes).
+    Removing rtx_mempool.o(.text.svcRtxMemoryPoolDelete), (112 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolDelete), (8 bytes).
+    Removing rtx_msgqueue.o(.text), (0 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osRtxMessageQueueTimerSetup), (8 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueNew), (8 bytes).
+    Removing rtx_msgqueue.o(.text.osMessageQueueNew), (36 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueNew), (8 bytes).
+    Removing rtx_msgqueue.o(.text.osMessageQueueGetName), (36 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGetName), (8 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osMessageQueuePut), (8 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGet), (8 bytes).
+    Removing rtx_msgqueue.o(.text.osMessageQueueGetCapacity), (48 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGetCapacity), (8 bytes).
+    Removing rtx_msgqueue.o(.text.svcRtxMessageQueueGetCapacity), (18 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGetCapacity), (8 bytes).
+    Removing rtx_msgqueue.o(.text.osMessageQueueGetMsgSize), (48 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGetMsgSize), (8 bytes).
+    Removing rtx_msgqueue.o(.text.svcRtxMessageQueueGetMsgSize), (18 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGetMsgSize), (8 bytes).
+    Removing rtx_msgqueue.o(.text.osMessageQueueGetCount), (48 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGetCount), (8 bytes).
+    Removing rtx_msgqueue.o(.text.svcRtxMessageQueueGetCount), (18 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGetCount), (8 bytes).
+    Removing rtx_msgqueue.o(.text.osMessageQueueGetSpace), (36 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGetSpace), (8 bytes).
+    Removing rtx_msgqueue.o(.text.svcRtxMessageQueueGetSpace), (22 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGetSpace), (8 bytes).
+    Removing rtx_msgqueue.o(.text.osMessageQueueReset), (40 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueReset), (8 bytes).
+    Removing rtx_msgqueue.o(.text.osMessageQueueDelete), (40 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueDelete), (8 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osRtxMessageQueuePostProcess), (8 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.MessageQueueRemove), (8 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.MessageQueuePut), (8 bytes).
+    Removing rtx_msgqueue.o(.text.svcRtxMessageQueueGetName), (18 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGetName), (8 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueuePut), (8 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.MessageQueueGet), (8 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGet), (8 bytes).
+    Removing rtx_msgqueue.o(.text.svcRtxMessageQueueReset), (160 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueReset), (8 bytes).
+    Removing rtx_msgqueue.o(.text.svcRtxMessageQueueDelete), (112 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueDelete), (8 bytes).
+    Removing rtx_system.o(.text), (0 bytes).
+    Removing rtx_system.o(.ARM.exidx.text.osRtxTick_Handler), (8 bytes).
+    Removing rtx_system.o(.ARM.exidx.text.osRtxPendSV_Handler), (8 bytes).
+    Removing rtx_system.o(.ARM.exidx.text.osRtxPostProcess), (8 bytes).
+    Removing os_systick.o(.text), (0 bytes).
+    Removing os_systick.o(.ARM.exidx.text.OS_Tick_Setup), (8 bytes).
+    Removing os_systick.o(.ARM.exidx.text.OS_Tick_Enable), (8 bytes).
+    Removing os_systick.o(.text.OS_Tick_Disable), (40 bytes).
+    Removing os_systick.o(.ARM.exidx.text.OS_Tick_Disable), (8 bytes).
+    Removing os_systick.o(.ARM.exidx.text.OS_Tick_AcknowledgeIRQ), (8 bytes).
+    Removing os_systick.o(.ARM.exidx.text.OS_Tick_GetIRQn), (8 bytes).
+    Removing os_systick.o(.text.OS_Tick_GetClock), (12 bytes).
+    Removing os_systick.o(.ARM.exidx.text.OS_Tick_GetClock), (8 bytes).
+    Removing os_systick.o(.text.OS_Tick_GetInterval), (12 bytes).
+    Removing os_systick.o(.ARM.exidx.text.OS_Tick_GetInterval), (8 bytes).
+    Removing os_systick.o(.text.OS_Tick_GetCount), (16 bytes).
+    Removing os_systick.o(.ARM.exidx.text.OS_Tick_GetCount), (8 bytes).
+    Removing os_systick.o(.text.OS_Tick_GetOverflow), (16 bytes).
+    Removing os_systick.o(.ARM.exidx.text.OS_Tick_GetOverflow), (8 bytes).
+    Removing fmul.o(.text), (122 bytes).
+    Removing fdiv.o(.text), (124 bytes).
+    Removing fcmpeq.o(.text), (28 bytes).
+    Removing ffixi.o(.text), (50 bytes).
+    Removing fepilogue.o(.text), (130 bytes).
+
+378 unused section(s) (total 9341 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/division.s                       0x00000000   Number         0  aeabi_sdivfast.o ABSOLUTE
+    ../clib/division.s                       0x00000000   Number         0  aeabi_sdivfast_div0.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  idiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv_div0.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  idiv_div0.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  idiv0.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/fpcmp.c                0x00000000   Number         0  fcmpeq.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  fdiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  fepilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  ffixi.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  fmul.o ABSOLUTE
+    RTE/Device/MKL25Z128xxx4/startup_MKL25Z4.s 0x00000000   Number         0  startup_mkl25z4.o ABSOLUTE
+    RTX_Config.c                             0x00000000   Number         0  rtx_config.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    os_systick.c                             0x00000000   Number         0  os_systick.o ABSOLUTE
+    rtx_kernel.c                             0x00000000   Number         0  rtx_kernel.o ABSOLUTE
+    rtx_lib.c                                0x00000000   Number         0  rtx_lib.o ABSOLUTE
+    rtx_memory.c                             0x00000000   Number         0  rtx_memory.o ABSOLUTE
+    rtx_mempool.c                            0x00000000   Number         0  rtx_mempool.o ABSOLUTE
+    rtx_msgqueue.c                           0x00000000   Number         0  rtx_msgqueue.o ABSOLUTE
+    rtx_mutex.c                              0x00000000   Number         0  rtx_mutex.o ABSOLUTE
+    rtx_system.c                             0x00000000   Number         0  rtx_system.o ABSOLUTE
+    rtx_thread.c                             0x00000000   Number         0  rtx_thread.o ABSOLUTE
+    rtx_timer.c                              0x00000000   Number         0  rtx_timer.o ABSOLUTE
+    system_MKL25Z4.c                         0x00000000   Number         0  system_mkl25z4.o ABSOLUTE
+    RESET                                    0x00000000   Section      192  startup_mkl25z4.o(RESET)
+    osRtxErrorStackOverflow                  0x00000001   Number         0  irq_armv6m.o ABSOLUTE
+    I_T_RUN_OFS                              0x00000014   Number         0  irq_armv6m.o ABSOLUTE
+    TCB_SP_OFS                               0x00000038   Number         0  irq_armv6m.o ABSOLUTE
+    .ARM.Collect$$$$00000000                 0x000000c0   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x000000c0   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x000000c4   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x000000c8   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x000000c8   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x000000c8   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    __lit__00000000                          0x000000d0   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .ARM.Collect$$$$0000000D                 0x000000d0   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x000000d0   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x000000d0   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x000000d4   Section       40  startup_mkl25z4.o(.text)
+    [Anonymous Symbol]                       0x000000fc   Section        0  irq_armv6m.o(.text)
+    SVC_Number                               0x00000106   Number         0  irq_armv6m.o(.text)
+    SVC_Context                              0x0000011c   Number         0  irq_armv6m.o(.text)
+    SVC_ContextSave                          0x0000012c   Number         0  irq_armv6m.o(.text)
+    SVC_ContextRestore                       0x00000140   Number         0  irq_armv6m.o(.text)
+    SVC_MSP                                  0x0000015c   Number         0  irq_armv6m.o(.text)
+    SVC_Exit                                 0x00000162   Number         0  irq_armv6m.o(.text)
+    SVC_User                                 0x00000164   Number         0  irq_armv6m.o(.text)
+    .text                                    0x000001a0   Section        0  memcpya.o(.text)
+    .text                                    0x000001c4   Section        0  memseta.o(.text)
+    .text                                    0x000001e8   Section        0  uidiv_div0.o(.text)
+    .text                                    0x00000228   Section       36  init.o(.text)
+    [Anonymous Symbol]                       0x0000024c   Section        0  main.o(.text.Green_LED_Control)
+    __arm_cp.20_0                            0x00000278   Number         4  main.o(.text.Green_LED_Control)
+    __arm_cp.20_1                            0x0000027c   Number         4  main.o(.text.Green_LED_Control)
+    __arm_cp.20_2                            0x00000280   Number         4  main.o(.text.Green_LED_Control)
+    __arm_cp.20_3                            0x00000284   Number         4  main.o(.text.Green_LED_Control)
+    __arm_cp.20_4                            0x00000288   Number         4  main.o(.text.Green_LED_Control)
+    [Anonymous Symbol]                       0x0000028c   Section        0  main.o(.text.Green_LED_thread)
+    [Anonymous Symbol]                       0x00000294   Section        0  main.o(.text.Init_PIT)
+    __arm_cp.17_1                            0x00000370   Number         4  main.o(.text.Init_PIT)
+    __arm_cp.17_3                            0x00000374   Number         4  main.o(.text.Init_PIT)
+    __arm_cp.17_4                            0x00000378   Number         4  main.o(.text.Init_PIT)
+    __arm_cp.17_5                            0x0000037c   Number         4  main.o(.text.Init_PIT)
+    __arm_cp.17_6                            0x00000380   Number         4  main.o(.text.Init_PIT)
+    MessageQueueGet                          0x00000385   Thumb Code    66  rtx_msgqueue.o(.text.MessageQueueGet)
+    [Anonymous Symbol]                       0x00000384   Section        0  rtx_msgqueue.o(.text.MessageQueueGet)
+    MessageQueueRemove                       0x000003c7   Thumb Code    30  rtx_msgqueue.o(.text.MessageQueueRemove)
+    [Anonymous Symbol]                       0x000003c6   Section        0  rtx_msgqueue.o(.text.MessageQueueRemove)
+    [Anonymous Symbol]                       0x000003e4   Section        0  os_systick.o(.text.OS_Tick_AcknowledgeIRQ)
+    [Anonymous Symbol]                       0x000003ec   Section        0  rtx_config.o(.text.osRtxErrorNotify)
+    [Anonymous Symbol]                       0x000003ee   Section        0  rtx_config.o(.text.osRtxIdleThread)
+    [Anonymous Symbol]                       0x000003f0   Section        0  os_systick.o(.text.OS_Tick_GetIRQn)
+    [Anonymous Symbol]                       0x000003f6   Section        0  main.o(.text.Red_LED_thread)
+    [Anonymous Symbol]                       0x000003fc   Section        0  rtx_kernel.o(.text.osRtxKernelPreInit)
+    i.__scatterload_null                     0x000003fe   Section        2  handlers.o(i.__scatterload_null)
+    .ARM.__at_0x400                          0x00000400   Section       16  startup_mkl25z4.o(.ARM.__at_0x400)
+    [Anonymous Symbol]                       0x00000410   Section        0  main.o(.text.Init_PWN)
+    __arm_cp.5_0                             0x00000544   Number         4  main.o(.text.Init_PWN)
+    __arm_cp.5_1                             0x00000548   Number         4  main.o(.text.Init_PWN)
+    __arm_cp.5_2                             0x0000054c   Number         4  main.o(.text.Init_PWN)
+    __arm_cp.5_3                             0x00000550   Number         4  main.o(.text.Init_PWN)
+    __arm_cp.5_4                             0x00000554   Number         4  main.o(.text.Init_PWN)
+    __arm_cp.5_5                             0x00000558   Number         4  main.o(.text.Init_PWN)
+    __arm_cp.5_6                             0x0000055c   Number         4  main.o(.text.Init_PWN)
+    __arm_cp.5_7                             0x00000560   Number         4  main.o(.text.Init_PWN)
+    __arm_cp.5_8                             0x00000564   Number         4  main.o(.text.Init_PWN)
+    [Anonymous Symbol]                       0x00000568   Section        0  main.o(.text.Init_UART2)
+    __arm_cp.0_0                             0x000005e8   Number         4  main.o(.text.Init_UART2)
+    __arm_cp.0_1                             0x000005ec   Number         4  main.o(.text.Init_UART2)
+    __arm_cp.0_2                             0x000005f0   Number         4  main.o(.text.Init_UART2)
+    MessageQueuePut                          0x000005f5   Thumb Code    94  rtx_msgqueue.o(.text.MessageQueuePut)
+    [Anonymous Symbol]                       0x000005f4   Section        0  rtx_msgqueue.o(.text.MessageQueuePut)
+    [Anonymous Symbol]                       0x00000654   Section        0  os_systick.o(.text.OS_Tick_Enable)
+    __arm_cp.1_1                             0x00000674   Number         4  os_systick.o(.text.OS_Tick_Enable)
+    [Anonymous Symbol]                       0x00000678   Section        0  os_systick.o(.text.OS_Tick_Setup)
+    __arm_cp.0_1                             0x000006b4   Number         4  os_systick.o(.text.OS_Tick_Setup)
+    __arm_cp.0_2                             0x000006b8   Number         4  os_systick.o(.text.OS_Tick_Setup)
+    __arm_cp.0_3                             0x000006bc   Number         4  os_systick.o(.text.OS_Tick_Setup)
+    [Anonymous Symbol]                       0x000006c0   Section        0  main.o(.text.PIT_IRQHandler)
+    __arm_cp.18_0                            0x00000704   Number         4  main.o(.text.PIT_IRQHandler)
+    __arm_cp.18_3                            0x00000708   Number         4  main.o(.text.PIT_IRQHandler)
+    __arm_cp.18_4                            0x0000070c   Number         4  main.o(.text.PIT_IRQHandler)
+    __arm_cp.18_5                            0x00000710   Number         4  main.o(.text.PIT_IRQHandler)
+    [Anonymous Symbol]                       0x00000714   Section        0  main.o(.text.Red_LED_Control)
+    __arm_cp.19_0                            0x00000738   Number         4  main.o(.text.Red_LED_Control)
+    __arm_cp.19_1                            0x0000073c   Number         4  main.o(.text.Red_LED_Control)
+    __arm_cp.19_2                            0x00000740   Number         4  main.o(.text.Red_LED_Control)
+    [Anonymous Symbol]                       0x00000744   Section        0  system_mkl25z4.o(.text.SystemCoreClockUpdate)
+    __arm_cp.1_0                             0x00000834   Number         4  system_mkl25z4.o(.text.SystemCoreClockUpdate)
+    __arm_cp.1_1                             0x00000838   Number         4  system_mkl25z4.o(.text.SystemCoreClockUpdate)
+    __arm_cp.1_2                             0x0000083c   Number         4  system_mkl25z4.o(.text.SystemCoreClockUpdate)
+    __arm_cp.1_3                             0x00000840   Number         4  system_mkl25z4.o(.text.SystemCoreClockUpdate)
+    __arm_cp.1_4                             0x00000844   Number         4  system_mkl25z4.o(.text.SystemCoreClockUpdate)
+    __arm_cp.1_5                             0x00000848   Number         4  system_mkl25z4.o(.text.SystemCoreClockUpdate)
+    __arm_cp.1_6                             0x0000084c   Number         4  system_mkl25z4.o(.text.SystemCoreClockUpdate)
+    [Anonymous Symbol]                       0x00000850   Section        0  system_mkl25z4.o(.text.SystemInit)
+    __arm_cp.0_0                             0x00000858   Number         4  system_mkl25z4.o(.text.SystemInit)
+    ThreadFlagsCheck                         0x0000085d   Thumb Code    74  rtx_thread.o(.text.ThreadFlagsCheck)
+    [Anonymous Symbol]                       0x0000085c   Section        0  rtx_thread.o(.text.ThreadFlagsCheck)
+    TimerInsert                              0x000008a9   Thumb Code    72  rtx_timer.o(.text.TimerInsert)
+    [Anonymous Symbol]                       0x000008a8   Section        0  rtx_timer.o(.text.TimerInsert)
+    __arm_cp.9_0                             0x000008f0   Number         4  rtx_timer.o(.text.TimerInsert)
+    [Anonymous Symbol]                       0x000008f4   Section        0  main.o(.text.UART2_IRQHandler)
+    __arm_cp.3_0                             0x00000918   Number         4  main.o(.text.UART2_IRQHandler)
+    __arm_cp.3_1                             0x0000091c   Number         4  main.o(.text.UART2_IRQHandler)
+    __arm_cp.3_2                             0x00000920   Number         4  main.o(.text.UART2_IRQHandler)
+    __NVIC_ClearPendingIRQ                   0x00000925   Thumb Code    24  main.o(.text.__NVIC_ClearPendingIRQ)
+    [Anonymous Symbol]                       0x00000924   Section        0  main.o(.text.__NVIC_ClearPendingIRQ)
+    __arm_cp.1_0                             0x00000938   Number         4  main.o(.text.__NVIC_ClearPendingIRQ)
+    __NVIC_EnableIRQ                         0x0000093d   Thumb Code    24  main.o(.text.__NVIC_EnableIRQ)
+    [Anonymous Symbol]                       0x0000093c   Section        0  main.o(.text.__NVIC_EnableIRQ)
+    __arm_cp.2_0                             0x00000950   Number         4  main.o(.text.__NVIC_EnableIRQ)
+    [Anonymous Symbol]                       0x00000954   Section        0  main.o(.text.main)
+    __arm_cp.23_0                            0x00000988   Number         4  main.o(.text.main)
+    __arm_cp.23_1                            0x0000098c   Number         4  main.o(.text.main)
+    [Anonymous Symbol]                       0x00000990   Section        0  rtx_kernel.o(.text.osKernelInitialize)
+    __arm_cp.2_0                             0x000009b4   Number         4  rtx_kernel.o(.text.osKernelInitialize)
+    [Anonymous Symbol]                       0x000009b8   Section        0  rtx_kernel.o(.text.osKernelStart)
+    __arm_cp.7_0                             0x000009d8   Number         4  rtx_kernel.o(.text.osKernelStart)
+    [Anonymous Symbol]                       0x000009dc   Section        0  rtx_msgqueue.o(.text.osMessageQueueGet)
+    __arm_cp.5_0                             0x00000a4c   Number         4  rtx_msgqueue.o(.text.osMessageQueueGet)
+    [Anonymous Symbol]                       0x00000a50   Section        0  rtx_msgqueue.o(.text.osMessageQueuePut)
+    __arm_cp.4_0                             0x00000ac0   Number         4  rtx_msgqueue.o(.text.osMessageQueuePut)
+    [Anonymous Symbol]                       0x00000ac4   Section        0  rtx_kernel.o(.text.osRtxKernelErrorNotify)
+    [Anonymous Symbol]                       0x00000acc   Section        0  rtx_memory.o(.text.osRtxMemoryAlloc)
+    [Anonymous Symbol]                       0x00000b44   Section        0  rtx_memory.o(.text.osRtxMemoryFree)
+    [Anonymous Symbol]                       0x00000b92   Section        0  rtx_memory.o(.text.osRtxMemoryInit)
+    [Anonymous Symbol]                       0x00000bc0   Section        0  rtx_mempool.o(.text.osRtxMemoryPoolAlloc)
+    [Anonymous Symbol]                       0x00000bea   Section        0  rtx_mempool.o(.text.osRtxMemoryPoolFree)
+    [Anonymous Symbol]                       0x00000c20   Section        0  rtx_mempool.o(.text.osRtxMemoryPoolInit)
+    osRtxMessageQueuePostProcess             0x00000c5d   Thumb Code   188  rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess)
+    [Anonymous Symbol]                       0x00000c5c   Section        0  rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess)
+    [Anonymous Symbol]                       0x00000d18   Section        0  rtx_msgqueue.o(.text.osRtxMessageQueueTimerSetup)
+    __arm_cp.0_0                             0x00000d38   Number         4  rtx_msgqueue.o(.text.osRtxMessageQueueTimerSetup)
+    [Anonymous Symbol]                       0x00000d3c   Section        0  rtx_mutex.o(.text.osRtxMutexOwnerRelease)
+    [Anonymous Symbol]                       0x00000d80   Section        0  rtx_mutex.o(.text.osRtxMutexOwnerRestore)
+    [Anonymous Symbol]                       0x00000dc8   Section        0  rtx_system.o(.text.osRtxPendSV_Handler)
+    [Anonymous Symbol]                       0x00000e48   Section        0  rtx_system.o(.text.osRtxPostProcess)
+    __arm_cp.2_1                             0x00000eb0   Number         4  rtx_system.o(.text.osRtxPostProcess)
+    osRtxThreadBlock                         0x00000eb5   Thumb Code    52  rtx_thread.o(.text.osRtxThreadBlock)
+    [Anonymous Symbol]                       0x00000eb4   Section        0  rtx_thread.o(.text.osRtxThreadBlock)
+    osRtxThreadDelayInsert                   0x00000ee9   Thumb Code   140  rtx_thread.o(.text.osRtxThreadDelayInsert)
+    [Anonymous Symbol]                       0x00000ee8   Section        0  rtx_thread.o(.text.osRtxThreadDelayInsert)
+    osRtxThreadDelayRemove                   0x00000f75   Thumb Code    68  rtx_thread.o(.text.osRtxThreadDelayRemove)
+    [Anonymous Symbol]                       0x00000f74   Section        0  rtx_thread.o(.text.osRtxThreadDelayRemove)
+    [Anonymous Symbol]                       0x00000fb8   Section        0  rtx_thread.o(.text.osRtxThreadDelayTick)
+    osRtxThreadDestroy                       0x0000100d   Thumb Code    40  rtx_thread.o(.text.osRtxThreadDestroy)
+    [Anonymous Symbol]                       0x0000100c   Section        0  rtx_thread.o(.text.osRtxThreadDestroy)
+    [Anonymous Symbol]                       0x00001034   Section        0  rtx_thread.o(.text.osRtxThreadDispatch)
+    osRtxThreadFree                          0x00001081   Thumb Code    80  rtx_thread.o(.text.osRtxThreadFree)
+    [Anonymous Symbol]                       0x00001080   Section        0  rtx_thread.o(.text.osRtxThreadFree)
+    __arm_cp.51_0                            0x000010d0   Number         4  rtx_thread.o(.text.osRtxThreadFree)
+    osRtxThreadJoinWakeup                    0x000010d5   Thumb Code    32  rtx_thread.o(.text.osRtxThreadJoinWakeup)
+    [Anonymous Symbol]                       0x000010d4   Section        0  rtx_thread.o(.text.osRtxThreadJoinWakeup)
+    [Anonymous Symbol]                       0x000010f4   Section        0  rtx_thread.o(.text.osRtxThreadListGet)
+    [Anonymous Symbol]                       0x00001108   Section        0  rtx_thread.o(.text.osRtxThreadListPut)
+    [Anonymous Symbol]                       0x00001134   Section        0  rtx_thread.o(.text.osRtxThreadListRemove)
+    [Anonymous Symbol]                       0x0000114c   Section        0  rtx_thread.o(.text.osRtxThreadListSort)
+    osRtxThreadPostProcess                   0x00001171   Thumb Code    38  rtx_thread.o(.text.osRtxThreadPostProcess)
+    [Anonymous Symbol]                       0x00001170   Section        0  rtx_thread.o(.text.osRtxThreadPostProcess)
+    [Anonymous Symbol]                       0x00001198   Section        0  rtx_thread.o(.text.osRtxThreadReadyPut)
+    [Anonymous Symbol]                       0x000011ac   Section        0  rtx_thread.o(.text.osRtxThreadRegPtr)
+    [Anonymous Symbol]                       0x000011b4   Section        0  rtx_thread.o(.text.osRtxThreadStartup)
+    __arm_cp.14_1                            0x000011ec   Number         4  rtx_thread.o(.text.osRtxThreadStartup)
+    [Anonymous Symbol]                       0x000011f0   Section        0  rtx_thread.o(.text.osRtxThreadSwitch)
+    __arm_cp.7_0                             0x000011fc   Number         4  rtx_thread.o(.text.osRtxThreadSwitch)
+    [Anonymous Symbol]                       0x00001200   Section        0  rtx_thread.o(.text.osRtxThreadWaitEnter)
+    __arm_cp.12_0                            0x0000123c   Number         4  rtx_thread.o(.text.osRtxThreadWaitEnter)
+    [Anonymous Symbol]                       0x00001240   Section        0  rtx_thread.o(.text.osRtxThreadWaitExit)
+    [Anonymous Symbol]                       0x00001264   Section        0  rtx_system.o(.text.osRtxTick_Handler)
+    __arm_cp.0_0                             0x000012e0   Number         4  rtx_system.o(.text.osRtxTick_Handler)
+    [Anonymous Symbol]                       0x000012e4   Section        0  rtx_timer.o(.text.osRtxTimerSetup)
+    __arm_cp.0_0                             0x00001300   Number         4  rtx_timer.o(.text.osRtxTimerSetup)
+    __arm_cp.0_1                             0x00001304   Number         4  rtx_timer.o(.text.osRtxTimerSetup)
+    [Anonymous Symbol]                       0x00001308   Section        0  rtx_timer.o(.text.osRtxTimerThread)
+    osRtxTimerTick                           0x00001325   Thumb Code   112  rtx_timer.o(.text.osRtxTimerTick)
+    [Anonymous Symbol]                       0x00001324   Section        0  rtx_timer.o(.text.osRtxTimerTick)
+    __arm_cp.1_0                             0x00001394   Number         4  rtx_timer.o(.text.osRtxTimerTick)
+    [Anonymous Symbol]                       0x00001398   Section        0  rtx_thread.o(.text.osThreadExit)
+    __arm_cp.30_0                            0x000013a0   Number         4  rtx_thread.o(.text.osThreadExit)
+    [Anonymous Symbol]                       0x000013a4   Section        0  rtx_thread.o(.text.osThreadNew)
+    __arm_cp.16_0                            0x000013c4   Number         4  rtx_thread.o(.text.osThreadNew)
+    svcRtxKernelInitialize                   0x000013c9   Thumb Code   308  rtx_kernel.o(.text.svcRtxKernelInitialize)
+    [Anonymous Symbol]                       0x000013c8   Section        0  rtx_kernel.o(.text.svcRtxKernelInitialize)
+    __arm_cp.21_2                            0x000014fc   Number         4  rtx_kernel.o(.text.svcRtxKernelInitialize)
+    svcRtxKernelStart                        0x00001501   Thumb Code   116  rtx_kernel.o(.text.svcRtxKernelStart)
+    [Anonymous Symbol]                       0x00001500   Section        0  rtx_kernel.o(.text.svcRtxKernelStart)
+    __arm_cp.22_0                            0x00001574   Number         4  rtx_kernel.o(.text.svcRtxKernelStart)
+    __arm_cp.22_1                            0x00001578   Number         4  rtx_kernel.o(.text.svcRtxKernelStart)
+    __arm_cp.22_2                            0x0000157c   Number         4  rtx_kernel.o(.text.svcRtxKernelStart)
+    __arm_cp.22_3                            0x00001580   Number         4  rtx_kernel.o(.text.svcRtxKernelStart)
+    svcRtxMessageQueueGet                    0x00001585   Thumb Code   200  rtx_msgqueue.o(.text.svcRtxMessageQueueGet)
+    [Anonymous Symbol]                       0x00001584   Section        0  rtx_msgqueue.o(.text.svcRtxMessageQueueGet)
+    __arm_cp.22_0                            0x0000164c   Number         4  rtx_msgqueue.o(.text.svcRtxMessageQueueGet)
+    svcRtxMessageQueueNew                    0x00001651   Thumb Code   428  rtx_msgqueue.o(.text.svcRtxMessageQueueNew)
+    [Anonymous Symbol]                       0x00001650   Section        0  rtx_msgqueue.o(.text.svcRtxMessageQueueNew)
+    __arm_cp.1_0                             0x000017fc   Number         4  rtx_msgqueue.o(.text.svcRtxMessageQueueNew)
+    __arm_cp.1_1                             0x00001800   Number         4  rtx_msgqueue.o(.text.svcRtxMessageQueueNew)
+    __arm_cp.1_2                             0x00001804   Number         4  rtx_msgqueue.o(.text.svcRtxMessageQueueNew)
+    __arm_cp.1_3                             0x00001808   Number         4  rtx_msgqueue.o(.text.svcRtxMessageQueueNew)
+    __arm_cp.1_5                             0x0000180c   Number         4  rtx_msgqueue.o(.text.svcRtxMessageQueueNew)
+    svcRtxMessageQueuePut                    0x00001811   Thumb Code   172  rtx_msgqueue.o(.text.svcRtxMessageQueuePut)
+    [Anonymous Symbol]                       0x00001810   Section        0  rtx_msgqueue.o(.text.svcRtxMessageQueuePut)
+    __arm_cp.20_0                            0x000018bc   Number         4  rtx_msgqueue.o(.text.svcRtxMessageQueuePut)
+    svcRtxThreadExit                         0x000018c1   Thumb Code    72  rtx_thread.o(.text.svcRtxThreadExit)
+    [Anonymous Symbol]                       0x000018c0   Section        0  rtx_thread.o(.text.svcRtxThreadExit)
+    __arm_cp.53_0                            0x00001908   Number         4  rtx_thread.o(.text.svcRtxThreadExit)
+    svcRtxThreadNew                          0x0000190d   Thumb Code   484  rtx_thread.o(.text.svcRtxThreadNew)
+    [Anonymous Symbol]                       0x0000190c   Section        0  rtx_thread.o(.text.svcRtxThreadNew)
+    __arm_cp.15_0                            0x00001af0   Number         4  rtx_thread.o(.text.svcRtxThreadNew)
+    __arm_cp.15_1                            0x00001af4   Number         4  rtx_thread.o(.text.svcRtxThreadNew)
+    __arm_cp.15_2                            0x00001af8   Number         4  rtx_thread.o(.text.svcRtxThreadNew)
+    __arm_cp.15_3                            0x00001afc   Number         4  rtx_thread.o(.text.svcRtxThreadNew)
+    __arm_cp.15_4                            0x00001b00   Number         4  rtx_thread.o(.text.svcRtxThreadNew)
+    __arm_cp.15_5                            0x00001b04   Number         4  rtx_thread.o(.text.svcRtxThreadNew)
+    i.__scatterload_copy                     0x00001b08   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_zeroinit                 0x00001b16   Section       14  handlers.o(i.__scatterload_zeroinit)
+    __tagsym$$used.0                         0x00001b24   Number         0  rtx_lib.o(.rodata)
+    __tagsym$$used.1                         0x00001b94   Number         0  rtx_lib.o(.rodata)
+    os_idle_thread_attr                      0x00001bd0   Data          36  rtx_lib.o(.rodata.os_idle_thread_attr)
+    [Anonymous Symbol]                       0x00001bd0   Section        0  rtx_lib.o(.rodata.os_idle_thread_attr)
+    os_timer_mq_attr                         0x00001bf4   Data          24  rtx_lib.o(.rodata.os_timer_mq_attr)
+    [Anonymous Symbol]                       0x00001bf4   Section        0  rtx_lib.o(.rodata.os_timer_mq_attr)
+    os_timer_thread_attr                     0x00001c0c   Data          36  rtx_lib.o(.rodata.os_timer_thread_attr)
+    [Anonymous Symbol]                       0x00001c0c   Section        0  rtx_lib.o(.rodata.os_timer_thread_attr)
+    [Anonymous Symbol]                       0x00001c30   Section        0  rtx_kernel.o(.rodata.str1.4)
+    os_isr_queue                             0x1ffff0c0   Data          64  rtx_lib.o(.bss.os)
+    [Anonymous Symbol]                       0x1ffff0c0   Section        0  rtx_lib.o(.bss.os)
+    os_mem                                   0x1ffff100   Data       32768  rtx_lib.o(.bss.os)
+    PendST                                   0x20007100   Data           1  os_systick.o(.bss.os)
+    [Anonymous Symbol]                       0x20007100   Section        0  os_systick.o(.bss.os)
+    os_timer_mq_cb                           0x20007104   Data          52  rtx_lib.o(.bss.os.msgqueue.cb)
+    [Anonymous Symbol]                       0x20007104   Section        0  rtx_lib.o(.bss.os.msgqueue.cb)
+    os_timer_mq_data                         0x20007138   Data          80  rtx_lib.o(.bss.os.msgqueue.mem)
+    [Anonymous Symbol]                       0x20007138   Section        0  rtx_lib.o(.bss.os.msgqueue.mem)
+    os_idle_thread_cb                        0x20007188   Data          68  rtx_lib.o(.bss.os.thread.cb)
+    [Anonymous Symbol]                       0x20007188   Section        0  rtx_lib.o(.bss.os.thread.cb)
+    os_timer_thread_cb                       0x200071cc   Data          68  rtx_lib.o(.bss.os.thread.cb)
+    os_idle_thread_stack                     0x20007210   Data         512  rtx_lib.o(.bss.os.thread.idle.stack)
+    [Anonymous Symbol]                       0x20007210   Section        0  rtx_lib.o(.bss.os.thread.idle.stack)
+    os_timer_thread_stack                    0x20007410   Data         512  rtx_lib.o(.bss.os.thread.timer.stack)
+    [Anonymous Symbol]                       0x20007410   Section        0  rtx_lib.o(.bss.os.thread.timer.stack)
+    STACK                                    0x20007618   Section      256  startup_mkl25z4.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  startup_mkl25z4.o(RESET)
+    .bss.os.evflags.cb$$Base                  - Undefined Weak Reference
+    .bss.os.evflags.cb$$Limit                 - Undefined Weak Reference
+    .bss.os.mempool.cb$$Base                  - Undefined Weak Reference
+    .bss.os.mempool.cb$$Limit                 - Undefined Weak Reference
+    .bss.os.mutex.cb$$Base                    - Undefined Weak Reference
+    .bss.os.mutex.cb$$Limit                   - Undefined Weak Reference
+    .bss.os.semaphore.cb$$Base                - Undefined Weak Reference
+    .bss.os.semaphore.cb$$Limit               - Undefined Weak Reference
+    .bss.os.timer.cb$$Base                    - Undefined Weak Reference
+    .bss.os.timer.cb$$Limit                   - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_End                            0x000000c0   Data           0  startup_mkl25z4.o(RESET)
+    __Vectors_Size                           0x000000c0   Number         0  startup_mkl25z4.o ABSOLUTE
+    __main                                   0x000000c1   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x000000c1   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x000000c5   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x000000c9   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x000000c9   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x000000c9   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x000000c9   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x000000d1   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x000000d1   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x000000d5   Thumb Code    12  startup_mkl25z4.o(.text)
+    NMI_Handler                              0x000000e1   Thumb Code     2  startup_mkl25z4.o(.text)
+    HardFault_Handler                        0x000000e3   Thumb Code     2  startup_mkl25z4.o(.text)
+    ADC0_IRQHandler                          0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    CMP0_IRQHandler                          0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    DAC0_IRQHandler                          0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    DMA0_IRQHandler                          0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    DMA1_IRQHandler                          0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    DMA2_IRQHandler                          0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    DMA3_IRQHandler                          0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    DefaultISR                               0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    FTFA_IRQHandler                          0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    I2C0_IRQHandler                          0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    I2C1_IRQHandler                          0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    LLWU_IRQHandler                          0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    LPTMR0_IRQHandler                        0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    LVD_LVW_IRQHandler                       0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    MCG_IRQHandler                           0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    PORTA_IRQHandler                         0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    PORTD_IRQHandler                         0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    RTC_IRQHandler                           0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    RTC_Seconds_IRQHandler                   0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    Reserved20_IRQHandler                    0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    Reserved39_IRQHandler                    0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    Reserved45_IRQHandler                    0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    SPI0_IRQHandler                          0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    SPI1_IRQHandler                          0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    TPM0_IRQHandler                          0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    TPM1_IRQHandler                          0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    TPM2_IRQHandler                          0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    TSI0_IRQHandler                          0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    UART0_IRQHandler                         0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    UART1_IRQHandler                         0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    USB0_IRQHandler                          0x000000eb   Thumb Code     0  startup_mkl25z4.o(.text)
+    SVC_Handler                              0x000000fd   Thumb Code   132  irq_armv6m.o(.text)
+    PendSV_Handler                           0x00000181   Thumb Code    12  irq_armv6m.o(.text)
+    SysTick_Handler                          0x0000018d   Thumb Code    12  irq_armv6m.o(.text)
+    __aeabi_memcpy                           0x000001a1   Thumb Code    36  memcpya.o(.text)
+    __aeabi_memcpy4                          0x000001a1   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memcpy8                          0x000001a1   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memset                           0x000001c5   Thumb Code    14  memseta.o(.text)
+    __aeabi_memset4                          0x000001c5   Thumb Code     0  memseta.o(.text)
+    __aeabi_memset8                          0x000001c5   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr                           0x000001d3   Thumb Code     4  memseta.o(.text)
+    __aeabi_memclr4                          0x000001d3   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr8                          0x000001d3   Thumb Code     0  memseta.o(.text)
+    _memset$wrapper                          0x000001d7   Thumb Code    18  memseta.o(.text)
+    __aeabi_uidiv                            0x000001e9   Thumb Code     0  uidiv_div0.o(.text)
+    __aeabi_uidivmod                         0x000001e9   Thumb Code    62  uidiv_div0.o(.text)
+    __scatterload                            0x00000229   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x00000229   Thumb Code     0  init.o(.text)
+    Green_LED_Control                        0x0000024d   Thumb Code    64  main.o(.text.Green_LED_Control)
+    Green_LED_thread                         0x0000028d   Thumb Code     6  main.o(.text.Green_LED_thread)
+    Init_PIT                                 0x00000295   Thumb Code   240  main.o(.text.Init_PIT)
+    OS_Tick_AcknowledgeIRQ                   0x000003e5   Thumb Code     8  os_systick.o(.text.OS_Tick_AcknowledgeIRQ)
+    osRtxErrorNotify                         0x000003ed   Thumb Code     2  rtx_config.o(.text.osRtxErrorNotify)
+    osRtxIdleThread                          0x000003ef   Thumb Code     2  rtx_config.o(.text.osRtxIdleThread)
+    OS_Tick_GetIRQn                          0x000003f1   Thumb Code     6  os_systick.o(.text.OS_Tick_GetIRQn)
+    Red_LED_thread                           0x000003f7   Thumb Code     6  main.o(.text.Red_LED_thread)
+    osRtxKernelPreInit                       0x000003fd   Thumb Code     2  rtx_kernel.o(.text.osRtxKernelPreInit)
+    __scatterload_null                       0x000003ff   Thumb Code     2  handlers.o(i.__scatterload_null)
+    Init_PWN                                 0x00000411   Thumb Code   344  main.o(.text.Init_PWN)
+    Init_UART2                               0x00000569   Thumb Code   140  main.o(.text.Init_UART2)
+    OS_Tick_Enable                           0x00000655   Thumb Code    32  os_systick.o(.text.OS_Tick_Enable)
+    OS_Tick_Setup                            0x00000679   Thumb Code    60  os_systick.o(.text.OS_Tick_Setup)
+    PIT_IRQHandler                           0x000006c1   Thumb Code    84  main.o(.text.PIT_IRQHandler)
+    Red_LED_Control                          0x00000715   Thumb Code    48  main.o(.text.Red_LED_Control)
+    SystemCoreClockUpdate                    0x00000745   Thumb Code   268  system_mkl25z4.o(.text.SystemCoreClockUpdate)
+    SystemInit                               0x00000851   Thumb Code    12  system_mkl25z4.o(.text.SystemInit)
+    UART2_IRQHandler                         0x000008f5   Thumb Code    48  main.o(.text.UART2_IRQHandler)
+    main                                     0x00000955   Thumb Code    60  main.o(.text.main)
+    osKernelInitialize                       0x00000991   Thumb Code    36  rtx_kernel.o(.text.osKernelInitialize)
+    osKernelStart                            0x000009b9   Thumb Code    32  rtx_kernel.o(.text.osKernelStart)
+    osMessageQueueGet                        0x000009dd   Thumb Code   112  rtx_msgqueue.o(.text.osMessageQueueGet)
+    osMessageQueuePut                        0x00000a51   Thumb Code   112  rtx_msgqueue.o(.text.osMessageQueuePut)
+    osRtxKernelErrorNotify                   0x00000ac5   Thumb Code     8  rtx_kernel.o(.text.osRtxKernelErrorNotify)
+    osRtxMemoryAlloc                         0x00000acd   Thumb Code   120  rtx_memory.o(.text.osRtxMemoryAlloc)
+    osRtxMemoryFree                          0x00000b45   Thumb Code    78  rtx_memory.o(.text.osRtxMemoryFree)
+    osRtxMemoryInit                          0x00000b93   Thumb Code    46  rtx_memory.o(.text.osRtxMemoryInit)
+    osRtxMemoryPoolAlloc                     0x00000bc1   Thumb Code    42  rtx_mempool.o(.text.osRtxMemoryPoolAlloc)
+    osRtxMemoryPoolFree                      0x00000beb   Thumb Code    54  rtx_mempool.o(.text.osRtxMemoryPoolFree)
+    osRtxMemoryPoolInit                      0x00000c21   Thumb Code    60  rtx_mempool.o(.text.osRtxMemoryPoolInit)
+    osRtxMessageQueueTimerSetup              0x00000d19   Thumb Code    32  rtx_msgqueue.o(.text.osRtxMessageQueueTimerSetup)
+    osRtxMutexOwnerRelease                   0x00000d3d   Thumb Code    68  rtx_mutex.o(.text.osRtxMutexOwnerRelease)
+    osRtxMutexOwnerRestore                   0x00000d81   Thumb Code    70  rtx_mutex.o(.text.osRtxMutexOwnerRestore)
+    osRtxPendSV_Handler                      0x00000dc9   Thumb Code   128  rtx_system.o(.text.osRtxPendSV_Handler)
+    osRtxPostProcess                         0x00000e49   Thumb Code   104  rtx_system.o(.text.osRtxPostProcess)
+    osRtxThreadDelayTick                     0x00000fb9   Thumb Code    84  rtx_thread.o(.text.osRtxThreadDelayTick)
+    osRtxThreadDispatch                      0x00001035   Thumb Code    76  rtx_thread.o(.text.osRtxThreadDispatch)
+    osRtxThreadListGet                       0x000010f5   Thumb Code    20  rtx_thread.o(.text.osRtxThreadListGet)
+    osRtxThreadListPut                       0x00001109   Thumb Code    44  rtx_thread.o(.text.osRtxThreadListPut)
+    osRtxThreadListRemove                    0x00001135   Thumb Code    24  rtx_thread.o(.text.osRtxThreadListRemove)
+    osRtxThreadListSort                      0x0000114d   Thumb Code    36  rtx_thread.o(.text.osRtxThreadListSort)
+    osRtxThreadReadyPut                      0x00001199   Thumb Code    20  rtx_thread.o(.text.osRtxThreadReadyPut)
+    osRtxThreadRegPtr                        0x000011ad   Thumb Code     6  rtx_thread.o(.text.osRtxThreadRegPtr)
+    osRtxThreadStartup                       0x000011b5   Thumb Code    56  rtx_thread.o(.text.osRtxThreadStartup)
+    osRtxThreadSwitch                        0x000011f1   Thumb Code    12  rtx_thread.o(.text.osRtxThreadSwitch)
+    osRtxThreadWaitEnter                     0x00001201   Thumb Code    60  rtx_thread.o(.text.osRtxThreadWaitEnter)
+    osRtxThreadWaitExit                      0x00001241   Thumb Code    34  rtx_thread.o(.text.osRtxThreadWaitExit)
+    osRtxTick_Handler                        0x00001265   Thumb Code   124  rtx_system.o(.text.osRtxTick_Handler)
+    osRtxTimerSetup                          0x000012e5   Thumb Code    28  rtx_timer.o(.text.osRtxTimerSetup)
+    osRtxTimerThread                         0x00001309   Thumb Code    28  rtx_timer.o(.text.osRtxTimerThread)
+    osThreadExit                             0x00001399   Thumb Code     8  rtx_thread.o(.text.osThreadExit)
+    osThreadNew                              0x000013a5   Thumb Code    32  rtx_thread.o(.text.osThreadNew)
+    __scatterload_copy                       0x00001b09   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_zeroinit                   0x00001b17   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    osRtxConfig                              0x00001b24   Data         112  rtx_lib.o(.rodata)
+    os_cb_sections                           0x00001b94   Data          56  rtx_lib.o(.rodata)
+    osRtxUserSVC                             0x00001bcc   Data           4  rtx_lib.o(.rodata.osRtxUserSVC)
+    Region$$Table$$Base                      0x00001c3c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00001c5c   Number         0  anon$$obj.o(Region$$Table)
+    Green_LED_index                          0x1ffff000   Data           4  main.o(.data.Green_LED_index)
+    LED_flag                                 0x1ffff004   Data           4  main.o(.data.LED_flag)
+    RED_LED_FLAG                             0x1ffff008   Data           4  main.o(.data.RED_LED_FLAG)
+    SystemCoreClock                          0x1ffff00c   Data           4  system_mkl25z4.o(.data.SystemCoreClock)
+    osRtxInfo                                0x1ffff010   Data         164  rtx_kernel.o(.data.os)
+    data                                     0x1ffff0b8   Data           1  main.o(.bss.data)
+    .bss.os.msgqueue.cb$$Base                0x20007104   Number         0  rtx_lib.o(.bss.os.msgqueue.cb)
+    .bss.os.msgqueue.cb$$Limit               0x20007138   Number         0  rtx_lib.o(.bss.os.msgqueue.cb)
+    .bss.os.thread.cb$$Base                  0x20007188   Number         0  rtx_lib.o(.bss.os.thread.cb)
+    .bss.os.thread.cb$$Limit                 0x20007210   Number         0  rtx_lib.o(.bss.os.thread.cb)
+    test_flag                                0x20007610   Data           4  main.o(.bss.test_flag)
+    __initial_sp                             0x20007718   Data           0  startup_mkl25z4.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x000000d5
+
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00001d10, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00001c5c, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x000000c0   Data   RO          101    RESET               startup_mkl25z4.o
+    0x000000c0   0x000000c0   0x00000000   Code   RO          577  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x000000c0   0x000000c0   0x00000004   Code   RO          602    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x000000c4   0x000000c4   0x00000004   Code   RO          605    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x000000c8   0x000000c8   0x00000000   Code   RO          607    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x000000c8   0x000000c8   0x00000000   Code   RO          609    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x000000c8   0x000000c8   0x00000008   Code   RO          610    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x000000d0   0x000000d0   0x00000000   Code   RO          612    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
+    0x000000d0   0x000000d0   0x00000000   Code   RO          614    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
+    0x000000d0   0x000000d0   0x00000004   Code   RO          603    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x000000d4   0x000000d4   0x00000028   Code   RO          103  * .text               startup_mkl25z4.o
+    0x000000fc   0x000000fc   0x000000a4   Code   RO          369    .text               RTX_CM0.lib(irq_armv6m.o)
+    0x000001a0   0x000001a0   0x00000024   Code   RO          588    .text               mc_p.l(memcpya.o)
+    0x000001c4   0x000001c4   0x00000024   Code   RO          590    .text               mc_p.l(memseta.o)
+    0x000001e8   0x000001e8   0x0000003e   Code   RO          620    .text               mc_p.l(uidiv_div0.o)
+    0x00000226   0x00000226   0x00000002   PAD
+    0x00000228   0x00000228   0x00000024   Code   RO          629    .text               mc_p.l(init.o)
+    0x0000024c   0x0000024c   0x00000040   Code   RO           42    .text.Green_LED_Control  main.o
+    0x0000028c   0x0000028c   0x00000006   Code   RO           46    .text.Green_LED_thread  main.o
+    0x00000292   0x00000292   0x00000002   PAD
+    0x00000294   0x00000294   0x000000f0   Code   RO           36    .text.Init_PIT      main.o
+    0x00000384   0x00000384   0x00000042   Code   RO          521    .text.MessageQueueGet  RTX_CM0.lib(rtx_msgqueue.o)
+    0x000003c6   0x000003c6   0x0000001e   Code   RO          513    .text.MessageQueueRemove  RTX_CM0.lib(rtx_msgqueue.o)
+    0x000003e4   0x000003e4   0x00000008   Code   RO          557    .text.OS_Tick_AcknowledgeIRQ  RTX_CM0.lib(os_systick.o)
+    0x000003ec   0x000003ec   0x00000002   Code   RO           71    .text.osRtxErrorNotify  rtx_config.o
+    0x000003ee   0x000003ee   0x00000002   Code   RO           69    .text.osRtxIdleThread  rtx_config.o
+    0x000003f0   0x000003f0   0x00000006   Code   RO          559    .text.OS_Tick_GetIRQn  RTX_CM0.lib(os_systick.o)
+    0x000003f6   0x000003f6   0x00000006   Code   RO           44    .text.Red_LED_thread  main.o
+    0x000003fc   0x000003fc   0x00000002   Code   RO          126    .text.osRtxKernelPreInit  RTX_CM0.lib(rtx_kernel.o)
+    0x000003fe   0x000003fe   0x00000002   Code   RO          634    i.__scatterload_null  mc_p.l(handlers.o)
+    0x00000400   0x00000400   0x00000010   Code   RO          102    .ARM.__at_0x400     startup_mkl25z4.o
+    0x00000410   0x00000410   0x00000158   Code   RO           12    .text.Init_PWN      main.o
+    0x00000568   0x00000568   0x0000008c   Code   RO            2    .text.Init_UART2    main.o
+    0x000005f4   0x000005f4   0x0000005e   Code   RO          515    .text.MessageQueuePut  RTX_CM0.lib(rtx_msgqueue.o)
+    0x00000652   0x00000652   0x00000002   PAD
+    0x00000654   0x00000654   0x00000024   Code   RO          553    .text.OS_Tick_Enable  RTX_CM0.lib(os_systick.o)
+    0x00000678   0x00000678   0x00000048   Code   RO          551    .text.OS_Tick_Setup  RTX_CM0.lib(os_systick.o)
+    0x000006c0   0x000006c0   0x00000054   Code   RO           38    .text.PIT_IRQHandler  main.o
+    0x00000714   0x00000714   0x00000030   Code   RO           40    .text.Red_LED_Control  main.o
+    0x00000744   0x00000744   0x0000010c   Code   RO          114    .text.SystemCoreClockUpdate  system_mkl25z4.o
+    0x00000850   0x00000850   0x0000000c   Code   RO          112    .text.SystemInit    system_mkl25z4.o
+    0x0000085c   0x0000085c   0x0000004a   Code   RO          272    .text.ThreadFlagsCheck  RTX_CM0.lib(rtx_thread.o)
+    0x000008a6   0x000008a6   0x00000002   PAD
+    0x000008a8   0x000008a8   0x0000004c   Code   RO          346    .text.TimerInsert   RTX_CM0.lib(rtx_timer.o)
+    0x000008f4   0x000008f4   0x00000030   Code   RO            8    .text.UART2_IRQHandler  main.o
+    0x00000924   0x00000924   0x00000018   Code   RO            4    .text.__NVIC_ClearPendingIRQ  main.o
+    0x0000093c   0x0000093c   0x00000018   Code   RO            6    .text.__NVIC_EnableIRQ  main.o
+    0x00000954   0x00000954   0x0000003c   Code   RO           48    .text.main          main.o
+    0x00000990   0x00000990   0x00000028   Code   RO          130    .text.osKernelInitialize  RTX_CM0.lib(rtx_kernel.o)
+    0x000009b8   0x000009b8   0x00000024   Code   RO          140    .text.osKernelStart  RTX_CM0.lib(rtx_kernel.o)
+    0x000009dc   0x000009dc   0x00000074   Code   RO          489    .text.osMessageQueueGet  RTX_CM0.lib(rtx_msgqueue.o)
+    0x00000a50   0x00000a50   0x00000074   Code   RO          487    .text.osMessageQueuePut  RTX_CM0.lib(rtx_msgqueue.o)
+    0x00000ac4   0x00000ac4   0x00000008   Code   RO          128    .text.osRtxKernelErrorNotify  RTX_CM0.lib(rtx_kernel.o)
+    0x00000acc   0x00000acc   0x00000078   Code   RO          415    .text.osRtxMemoryAlloc  RTX_CM0.lib(rtx_memory.o)
+    0x00000b44   0x00000b44   0x0000004e   Code   RO          417    .text.osRtxMemoryFree  RTX_CM0.lib(rtx_memory.o)
+    0x00000b92   0x00000b92   0x0000002e   Code   RO          413    .text.osRtxMemoryInit  RTX_CM0.lib(rtx_memory.o)
+    0x00000bc0   0x00000bc0   0x0000002a   Code   RO          429    .text.osRtxMemoryPoolAlloc  RTX_CM0.lib(rtx_mempool.o)
+    0x00000bea   0x00000bea   0x00000036   Code   RO          431    .text.osRtxMemoryPoolFree  RTX_CM0.lib(rtx_mempool.o)
+    0x00000c20   0x00000c20   0x0000003c   Code   RO          427    .text.osRtxMemoryPoolInit  RTX_CM0.lib(rtx_mempool.o)
+    0x00000c5c   0x00000c5c   0x000000bc   Code   RO          511    .text.osRtxMessageQueuePostProcess  RTX_CM0.lib(rtx_msgqueue.o)
+    0x00000d18   0x00000d18   0x00000024   Code   RO          479    .text.osRtxMessageQueueTimerSetup  RTX_CM0.lib(rtx_msgqueue.o)
+    0x00000d3c   0x00000d3c   0x00000044   Code   RO          377    .text.osRtxMutexOwnerRelease  RTX_CM0.lib(rtx_mutex.o)
+    0x00000d80   0x00000d80   0x00000046   Code   RO          379    .text.osRtxMutexOwnerRestore  RTX_CM0.lib(rtx_mutex.o)
+    0x00000dc6   0x00000dc6   0x00000002   PAD
+    0x00000dc8   0x00000dc8   0x00000080   Code   RO          539    .text.osRtxPendSV_Handler  RTX_CM0.lib(rtx_system.o)
+    0x00000e48   0x00000e48   0x0000006c   Code   RO          541    .text.osRtxPostProcess  RTX_CM0.lib(rtx_system.o)
+    0x00000eb4   0x00000eb4   0x00000034   Code   RO          212    .text.osRtxThreadBlock  RTX_CM0.lib(rtx_thread.o)
+    0x00000ee8   0x00000ee8   0x0000008c   Code   RO          220    .text.osRtxThreadDelayInsert  RTX_CM0.lib(rtx_thread.o)
+    0x00000f74   0x00000f74   0x00000044   Code   RO          216    .text.osRtxThreadDelayRemove  RTX_CM0.lib(rtx_thread.o)
+    0x00000fb8   0x00000fb8   0x00000054   Code   RO          204    .text.osRtxThreadDelayTick  RTX_CM0.lib(rtx_thread.o)
+    0x0000100c   0x0000100c   0x00000028   Code   RO          304    .text.osRtxThreadDestroy  RTX_CM0.lib(rtx_thread.o)
+    0x00001034   0x00001034   0x0000004c   Code   RO          210    .text.osRtxThreadDispatch  RTX_CM0.lib(rtx_thread.o)
+    0x00001080   0x00001080   0x00000054   Code   RO          296    .text.osRtxThreadFree  RTX_CM0.lib(rtx_thread.o)
+    0x000010d4   0x000010d4   0x00000020   Code   RO          302    .text.osRtxThreadJoinWakeup  RTX_CM0.lib(rtx_thread.o)
+    0x000010f4   0x000010f4   0x00000014   Code   RO          196    .text.osRtxThreadListGet  RTX_CM0.lib(rtx_thread.o)
+    0x00001108   0x00001108   0x0000002c   Code   RO          194    .text.osRtxThreadListPut  RTX_CM0.lib(rtx_thread.o)
+    0x00001134   0x00001134   0x00000018   Code   RO          200    .text.osRtxThreadListRemove  RTX_CM0.lib(rtx_thread.o)
+    0x0000114c   0x0000114c   0x00000024   Code   RO          198    .text.osRtxThreadListSort  RTX_CM0.lib(rtx_thread.o)
+    0x00001170   0x00001170   0x00000026   Code   RO          270    .text.osRtxThreadPostProcess  RTX_CM0.lib(rtx_thread.o)
+    0x00001196   0x00001196   0x00000002   PAD
+    0x00001198   0x00001198   0x00000014   Code   RO          202    .text.osRtxThreadReadyPut  RTX_CM0.lib(rtx_thread.o)
+    0x000011ac   0x000011ac   0x00000006   Code   RO          206    .text.osRtxThreadRegPtr  RTX_CM0.lib(rtx_thread.o)
+    0x000011b2   0x000011b2   0x00000002   PAD
+    0x000011b4   0x000011b4   0x0000003c   Code   RO          222    .text.osRtxThreadStartup  RTX_CM0.lib(rtx_thread.o)
+    0x000011f0   0x000011f0   0x00000010   Code   RO          208    .text.osRtxThreadSwitch  RTX_CM0.lib(rtx_thread.o)
+    0x00001200   0x00001200   0x00000040   Code   RO          218    .text.osRtxThreadWaitEnter  RTX_CM0.lib(rtx_thread.o)
+    0x00001240   0x00001240   0x00000022   Code   RO          214    .text.osRtxThreadWaitExit  RTX_CM0.lib(rtx_thread.o)
+    0x00001262   0x00001262   0x00000002   PAD
+    0x00001264   0x00001264   0x00000080   Code   RO          537    .text.osRtxTick_Handler  RTX_CM0.lib(rtx_system.o)
+    0x000012e4   0x000012e4   0x00000024   Code   RO          328    .text.osRtxTimerSetup  RTX_CM0.lib(rtx_timer.o)
+    0x00001308   0x00001308   0x0000001c   Code   RO          332    .text.osRtxTimerThread  RTX_CM0.lib(rtx_timer.o)
+    0x00001324   0x00001324   0x00000074   Code   RO          330    .text.osRtxTimerTick  RTX_CM0.lib(rtx_timer.o)
+    0x00001398   0x00001398   0x0000000c   Code   RO          254    .text.osThreadExit  RTX_CM0.lib(rtx_thread.o)
+    0x000013a4   0x000013a4   0x00000024   Code   RO          226    .text.osThreadNew   RTX_CM0.lib(rtx_thread.o)
+    0x000013c8   0x000013c8   0x00000138   Code   RO          168    .text.svcRtxKernelInitialize  RTX_CM0.lib(rtx_kernel.o)
+    0x00001500   0x00001500   0x00000084   Code   RO          170    .text.svcRtxKernelStart  RTX_CM0.lib(rtx_kernel.o)
+    0x00001584   0x00001584   0x000000cc   Code   RO          523    .text.svcRtxMessageQueueGet  RTX_CM0.lib(rtx_msgqueue.o)
+    0x00001650   0x00001650   0x000001c0   Code   RO          481    .text.svcRtxMessageQueueNew  RTX_CM0.lib(rtx_msgqueue.o)
+    0x00001810   0x00001810   0x000000b0   Code   RO          519    .text.svcRtxMessageQueuePut  RTX_CM0.lib(rtx_msgqueue.o)
+    0x000018c0   0x000018c0   0x0000004c   Code   RO          300    .text.svcRtxThreadExit  RTX_CM0.lib(rtx_thread.o)
+    0x0000190c   0x0000190c   0x000001fc   Code   RO          224    .text.svcRtxThreadNew  RTX_CM0.lib(rtx_thread.o)
+    0x00001b08   0x00001b08   0x0000000e   Code   RO          633    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x00001b16   0x00001b16   0x0000000e   Code   RO          635    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x00001b24   0x00001b24   0x000000a8   Data   RO           86    .rodata             rtx_lib.o
+    0x00001bcc   0x00001bcc   0x00000004   Data   RO           88    .rodata.osRtxUserSVC  rtx_lib.o
+    0x00001bd0   0x00001bd0   0x00000024   Data   RO           83    .rodata.os_idle_thread_attr  rtx_lib.o
+    0x00001bf4   0x00001bf4   0x00000018   Data   RO           85    .rodata.os_timer_mq_attr  rtx_lib.o
+    0x00001c0c   0x00001c0c   0x00000024   Data   RO           84    .rodata.os_timer_thread_attr  rtx_lib.o
+    0x00001c30   0x00001c30   0x0000000b   Data   RO          184    .rodata.str1.4      RTX_CM0.lib(rtx_kernel.o)
+    0x00001c3b   0x00001c3b   0x00000001   PAD
+    0x00001c3c   0x00001c3c   0x00000020   Data   RO          632    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Exec base: 0x1ffff000, Load base: 0x00001c5c, Size: 0x000000b4, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x1ffff000   0x00001c5c   0x00000004   Data   RW           57    .data.Green_LED_index  main.o
+    0x1ffff004   0x00001c60   0x00000004   Data   RW           51    .data.LED_flag      main.o
+    0x1ffff008   0x00001c64   0x00000004   Data   RW           56    .data.RED_LED_FLAG  main.o
+    0x1ffff00c   0x00001c68   0x00000004   Data   RW          116    .data.SystemCoreClock  system_mkl25z4.o
+    0x1ffff010   0x00001c6c   0x000000a4   Data   RW          185    .data.os            RTX_CM0.lib(rtx_kernel.o)
+
+
+    Execution Region ER_ZI (Exec base: 0x1ffff0b8, Load base: 0x00001d10, Size: 0x00008660, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x1ffff0b8        -       0x00000001   Zero   RW           52    .bss.data           main.o
+    0x1ffff0b9   0x00001d10   0x00000007   PAD
+    0x1ffff0c0        -       0x00008040   Zero   RW           82    .bss.os             rtx_lib.o
+    0x20007100        -       0x00000001   Zero   RW          569    .bss.os             RTX_CM0.lib(os_systick.o)
+    0x20007101   0x00001d10   0x00000003   PAD
+    0x20007104        -       0x00000034   Zero   RW           92    .bss.os.msgqueue.cb  rtx_lib.o
+    0x20007138        -       0x00000050   Zero   RW           93    .bss.os.msgqueue.mem  rtx_lib.o
+    0x20007188        -       0x00000088   Zero   RW           89    .bss.os.thread.cb   rtx_lib.o
+    0x20007210        -       0x00000200   Zero   RW           90    .bss.os.thread.idle.stack  rtx_lib.o
+    0x20007410        -       0x00000200   Zero   RW           91    .bss.os.thread.timer.stack  rtx_lib.o
+    0x20007610        -       0x00000004   Zero   RW           58    .bss.test_flag      main.o
+    0x20007614   0x00001d10   0x00000004   PAD
+    0x20007618        -       0x00000100   Zero   RW           99    STACK               startup_mkl25z4.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+      1088        144          0         12          5       7625   main.o
+         4          0          0          0          0        799   rtx_config.o
+         0          0        268          0      34124       5526   rtx_lib.o
+        56         30        192          0        256        972   startup_mkl25z4.o
+       280         40          0          4          0       2513   system_mkl25z4.o
+
+    ----------------------------------------------------------------------
+      1430        214        492         16      34396      17435   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         2          0          0          0         11          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+       164          8          0          0          0        658   irq_armv6m.o
+       122         16          0          0          1       2812   os_systick.o
+       530         28         11        164          0      15793   rtx_kernel.o
+       244          0          0          0          0       2665   rtx_memory.o
+       156          0          0          0          0      14433   rtx_mempool.o
+      1474         40          0          0          0      18183   rtx_msgqueue.o
+       138          0          0          0          0       9527   rtx_mutex.o
+       364         18          0          0          0       4871   rtx_system.o
+      1644         52          0          0          0      31596   rtx_thread.o
+       256         16          0          0          0       9965   rtx_timer.o
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        36          0          0          0          0         60   memcpya.o
+        36          0          0          0          0        100   memseta.o
+        62          0          0          0          0         72   uidiv_div0.o
+
+    ----------------------------------------------------------------------
+      5326        194         12        164          4     110803   Library Totals
+        14          0          1          0          3          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+      5092        178         11        164          1     110503   RTX_CM0.lib
+       220         16          0          0          0        300   mc_p.l
+
+    ----------------------------------------------------------------------
+      5326        194         12        164          4     110803   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      6756        408        504        180      34400     128126   Grand Totals
+      6756        408        504        180      34400     128126   ELF Image Totals
+      6756        408        504        180          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 7260 (   7.09kB)
+    Total RW  Size (RW Data + ZI Data)             34580 (  33.77kB)
+    Total ROM Size (Code + RO Data + RW Data)       7440 (   7.27kB)
+
+==============================================================================
+
