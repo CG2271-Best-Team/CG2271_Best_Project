@@ -29,15 +29,15 @@ static volatile int tone;
 static volatile int song_note;
 static volatile int check;
 
-static float notes[] = {350, 9000, NOTE_A4, NOTE_G4, NOTE_C5, NOTE_B4, NOTE_G4, 0,
+static float notes[] = {NOTE_G4, NOTE_G4, NOTE_A4, NOTE_G4, NOTE_C5, NOTE_B4, 0,
                      NOTE_G4, NOTE_G4, NOTE_A4, NOTE_G4, NOTE_D5, NOTE_C5, 0,
                      NOTE_G4, NOTE_G4, NOTE_G5, NOTE_E5, NOTE_C5, NOTE_B4, NOTE_A4, 0,
-                     NOTE_F5, NOTE_F5, NOTE_E5, NOTE_C5, NOTE_D5, NOTE_C5};
+                     NOTE_F5, NOTE_F5, NOTE_E5, NOTE_C5, NOTE_D5, NOTE_C5, 0};
 
-static int durations[] = {400, 400, 800, 400, 400, 800, 400, 800,
-                       400, 400, 800, 400, 400, 800, 800,
-                       400, 400, 800, 400, 400, 400, 800, 800,
-                       400, 400, 800, 400, 400, 800};
+static int durations[] = {400, 200, 800, 800, 800, 800, 800,
+                       400, 200, 800, 800, 800, 800, 800,
+                       400, 200, 800, 800, 800, 800, 800, 800,
+                       400, 200, 800, 800, 800, 800, 800};
 											 
 /* Delay Function */
 static void delay(volatile uint32_t nof) {
@@ -138,11 +138,13 @@ void playNoteI(float note, int duration) {
 //Only edit on this function for music
 void playHappyBirthday() {
 
-    for (int i = 0; i < 29; i++) { // There are 29 notes
+    for (int i = 0; i < sizeof(notes)/sizeof(notes[0]); i++) { // There are 29 notes
 			int tone = processor_freq / (notes[i] * 128);
 			TPM2_MOD = tone;
-			TPM2_C1V = tone / 2;
-			osDelay(durations[i]);
+			TPM2_C1V = tone >> 2;
+			osDelay(0.9 * durations[i]);
+			TPM2_C1V = 0;
+			osDelay(0.1 * durations[i]);
     }
 		
 } 
