@@ -187,12 +187,16 @@ void Motor_Control() { //left 0, right 1, forward 2, back 3, rest 4
 	if (Motor_flag == Left) {  // right < left
 	//if (motion == 0) {
 		PWM01_forward(1);
-		PWM23_forward(3);
+		PWM23_back(2);
+		osDelay(200);
+		PWM23_forward(1);
 	}
 	if (Motor_flag == Right) {  // left < right
 	//if (motion == 1) {
-		PWM01_forward(3);
+		PWM01_back(2);
 		PWM23_forward(1);
+		osDelay(200);
+		PWM01_forward(1)
 	}
 	if (Motor_flag == Forward) {
 	//if (motion == 2) {
