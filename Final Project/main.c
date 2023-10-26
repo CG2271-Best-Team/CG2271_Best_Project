@@ -8,6 +8,7 @@
 #include "UART.h"
 #include "PWM.h"
 #include "PIT.h"
+#include "Directions.h"
 
 //int volatile
 /*----------------------------------------------------------------------------
@@ -43,7 +44,7 @@ void Motor_thread()
 {
 	for (;;)
 	{
-		Motor_Control(Forward);
+		Motor_Control();
 	}
 }
 

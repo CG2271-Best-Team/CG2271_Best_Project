@@ -60,23 +60,38 @@ void Init_UART2(uint32_t baud_rate)
 
 Direction Direction_convert(uint8_t data)
 {
-	if(data == 0x29)
+	if(data == 0x37)
 	{
 		return Stationary;
 	}
-	if(data == 0x31)
+	if(data == 0x29)
 	{
 		return Forward;
 	}
-	if (data == 0x33)
+	if(data == 0x31)
 	{
 		return Backward;
 	}
-	if (data == 0x35)
+	if (data == 0x33)
 	{
 		return Left;
 	}
-	return Right;
+	if (data == 0x35)
+	{
+		return Right;
+	}
+}
+
+int LED_convert (uint8_t data)
+{
+	if(data == 0x37)
+	{
+		return 0;
+	}
+	else
+	{
+		return 1;
+	}
 }
 
 void UART2_IRQHandler() 
@@ -87,16 +102,7 @@ void UART2_IRQHandler()
 	{
 		data = UART2->D;
 		Motor_flag = Direction_convert(data);
-		
-		if(data == 0x29) // Robot stationary
-		{
-			LED_flag = 0;
-			//Motor_flag = Stationary;
-		}
-		else // Robot moving
-		{
-			LED_flag = 1;
-		}
+		LED_flag = LED_convert(data);
 	}
 }
 

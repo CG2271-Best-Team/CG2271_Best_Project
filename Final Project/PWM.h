@@ -24,7 +24,7 @@
 #define NOTE_F5 698.46
 #define NOTE_G5 783.99
 
-//extern enum Direction volatile Motor_flag;
+extern Direction volatile Motor_flag;
 static volatile int tone;
 static volatile int song_note;
 static volatile int check;
@@ -183,28 +183,28 @@ void PWM23_rest(void) { //right
 	TPM0_C3V = 0;
 }
 
-void Motor_Control(Direction d) { //left 0, right 1, forward 2, back 3, rest 4 
-	if (d == Left) {  // right < left
+void Motor_Control() { //left 0, right 1, forward 2, back 3, rest 4 
+	if (Motor_flag == Left) {  // right < left
 	//if (motion == 0) {
 		PWM01_forward(1);
 		PWM23_forward(3);
 	}
-	if (d == Right) {  // left < right
+	if (Motor_flag == Right) {  // left < right
 	//if (motion == 1) {
 		PWM01_forward(3);
 		PWM23_forward(1);
 	}
-	if (d == Forward) {
+	if (Motor_flag == Forward) {
 	//if (motion == 2) {
 		PWM01_forward(1);
 		PWM23_forward(1);
 	}
-	if (d == Backward) {
+	if (Motor_flag == Backward) {
 	//if (motion == 3) {
 		PWM01_back(1);
 		PWM23_back(1);
 	}
-	if (d == Stationary) {
+	if (Motor_flag == Stationary) {
 	//if (motion == 4) {
 		PWM01_rest();
 		PWM23_rest();
