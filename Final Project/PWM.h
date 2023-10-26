@@ -29,6 +29,16 @@ static volatile int tone;
 static volatile int song_note;
 static volatile int check;
 
+static float notes[] = {350, 9000, NOTE_A4, NOTE_G4, NOTE_C5, NOTE_B4, NOTE_G4, 0,
+                     NOTE_G4, NOTE_G4, NOTE_A4, NOTE_G4, NOTE_D5, NOTE_C5, 0,
+                     NOTE_G4, NOTE_G4, NOTE_G5, NOTE_E5, NOTE_C5, NOTE_B4, NOTE_A4, 0,
+                     NOTE_F5, NOTE_F5, NOTE_E5, NOTE_C5, NOTE_D5, NOTE_C5};
+
+static int durations[] = {400, 400, 800, 400, 400, 800, 400, 800,
+                       400, 400, 800, 400, 400, 800, 800,
+                       400, 400, 800, 400, 400, 400, 800, 800,
+                       400, 400, 800, 400, 400, 800};
+											 
 /* Delay Function */
 static void delay(volatile uint32_t nof) {
 	while(nof!=0) {
@@ -112,7 +122,9 @@ void Init_PWM(void)
 	TPM2_C1V = 0; // initial buzzer is silent
 }
 
-void playNote(float note, int duration) {
+//Depricated, do not use
+void playNoteI(float note, int duration) {
+		
     if (note != 0) {
 			tone = processor_freq / (note * 128); // Calculate the mod value
 			TPM2_MOD = tone;
@@ -121,27 +133,19 @@ void playNote(float note, int duration) {
 		else {
 			TPM2_C1V = 0;
 		}
-		delay(duration);
 }
 
-volatile int called = 1;
-
+//Only edit on this function for music
 void playHappyBirthday() {
-    float notes[] = {150, 9000, NOTE_A4, NOTE_G4, NOTE_C5, NOTE_B4, NOTE_G4, 0,
-                     NOTE_G4, NOTE_G4, NOTE_A4, NOTE_G4, NOTE_D5, NOTE_C5, 0,
-                     NOTE_G4, NOTE_G4, NOTE_G5, NOTE_E5, NOTE_C5, NOTE_B4, NOTE_A4, 0,
-                     NOTE_F5, NOTE_F5, NOTE_E5, NOTE_C5, NOTE_D5, NOTE_C5};
-
-    int durations[] = {400, 400, 800, 400, 400, 800, 400, 800,
-                       400, 400, 800, 400, 400, 800, 800,
-                       400, 400, 800, 400, 400, 400, 800, 800,
-                       400, 400, 800, 400, 400, 800};
 
     for (int i = 0; i < 29; i++) { // There are 29 notes
-			called++;
-        playNote(notes[i], durations[i]);
+			int tone = processor_freq / (notes[i] * 128);
+			TPM2_MOD = tone;
+			TPM2_C1V = tone / 2;
+			osDelay(durations[i]);
     }
-}
+		
+} 
 
 void playEndSong() {
 

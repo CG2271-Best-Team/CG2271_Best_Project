@@ -99,6 +99,8 @@
 #ifndef SYSTEM_MKL25Z4_H_
 #define SYSTEM_MKL25Z4_H_                        /**< Symbol preventing repeated inclusion */
 
+#define CLOCK_SETUP 1
+
 #ifdef __cplusplus
 extern "C" {
 #endif

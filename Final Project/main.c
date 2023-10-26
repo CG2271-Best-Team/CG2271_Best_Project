@@ -54,7 +54,6 @@ int main (void) {
 	Init_PWM();
 	Init_PIT();
 	Init_UART2(BAUD_RATE); // Baudrate = 9600s
-	//Motor_Control(1);
   // ...
  
   osKernelInitialize();                 // Initialize CMSIS-RTOS
