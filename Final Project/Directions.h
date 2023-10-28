@@ -6,7 +6,9 @@ typedef enum {
     Backward,
     Left,
 		Right,
-		Stationary
+		Stationary,
+		SpotLeft,
+		SpotRight
 } Direction;
 
 #endif //DIRECTION_H

@@ -8,14 +8,6 @@
 #define LOAD_250ms 3000000
 #define MASK(x) (1 << (x))
 
-/*enum Direction {
-    Forward,
-    Backward,
-    Left,
-		Right,
-		Stationary
-};*/
-
 volatile uint8_t data;
 unsigned int counter = 0;
 int volatile LED_flag = 1;
@@ -79,6 +71,14 @@ Direction Direction_convert(uint8_t data)
 	if (data == 0x35)
 	{
 		return Right;
+	}
+	if (data == 0x39) 
+	{
+		return SpotRight;
+	}
+	if (data == 0x41)
+	{
+		return SpotLeft;
 	}
 }
 
