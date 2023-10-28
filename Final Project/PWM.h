@@ -187,30 +187,39 @@ void Motor_Control() { //left 0, right 1, forward 2, back 3, rest 4
 	if (Motor_flag == Left) {  // right < left
 	//if (motion == 0) {
 		PWM01_forward(1);
-		PWM23_back(2);
-		osDelay(200);
-		PWM23_forward(1);
+		PWM23_back(5);
+		//osDelay(200);
+		//PWM23_forward(1);
 	}
-	if (Motor_flag == Right) {  // left < right
+	else if (Motor_flag == Right) {  // left < right
 	//if (motion == 1) {
-		PWM01_back(2);
+		PWM01_back(5);
 		PWM23_forward(1);
-		osDelay(200);
-		PWM01_forward(1)
+		//osDelay(200);
+		//PWM01_forward(1)
 	}
-	if (Motor_flag == Forward) {
+	else if (Motor_flag == Forward) {
 	//if (motion == 2) {
 		PWM01_forward(1);
 		PWM23_forward(1);
 	}
-	if (Motor_flag == Backward) {
+	else if (Motor_flag == Backward) {
 	//if (motion == 3) {
 		PWM01_back(1);
 		PWM23_back(1);
 	}
-	if (Motor_flag == Stationary) {
+	else if (Motor_flag == Stationary) {
 	//if (motion == 4) {
 		PWM01_rest();
 		PWM23_rest();
 	}
+	else if (Motor_flag == SpotLeft) {
+		PWM01_forward(1);
+		PWM23_back(1);
+	} 
+	else if (Motor_flag == SpotRight) {
+		PWM01_back(1);
+		PWM23_forward(1);
+	}
+	
 }
