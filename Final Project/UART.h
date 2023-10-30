@@ -120,13 +120,13 @@ void UART2_IRQHandler() // the UART IRQ sets the thread flag for data decoding t
 	
 	if (UART2->S1 & UART_S1_RDRF_MASK) 
 	{
-		osThreadFlagsSet(data_thread_id, 0x00000001);
+		data = UART2->D; // first capture the incoming data
+		osThreadFlagsSet(data_thread_id, 0x00000001); // then set the data processing flag to decode it
 	}
 }
 
 void Data_decode()
 {
-	data = UART2->D;
 	Buzzer_flag = Buzzer_convert(data);
 	Motor_flag = Direction_convert(data);
 	LED_flag = LED_convert(data);

@@ -50,13 +50,13 @@ void Motor_thread()
 	}
 }
 
-
 void Data_thread()
 {
 	for (;;)
 	{
-		osThreadFlagsWait(0x00000001, osFlagsWaitAll, osWaitForever); // wait for the LSB to be set to start decoding data
-		Data_decode();
+		uint32_t flags = osThreadFlagsWait(0x00000001, osFlagsWaitAll, osWaitForever); // wait for the LSB to be set to start decoding data
+		if (flags & 0x00000001)
+			Data_decode();
 	}
 }
 
