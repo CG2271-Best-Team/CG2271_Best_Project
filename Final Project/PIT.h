@@ -5,12 +5,12 @@
 #define Green_Pin_2 4
 #define Green_Pin_3 5
 #define Green_Pin_4 6
-#define Green_Pin_5 7
-#define Green_Pin_6 8
-#define Green_Pin_7 9
-#define Green_Pin_8 10
-#define Green_Pin_9 11
-#define Green_Pin_10 12 // all port c
+#define Green_Pin_5 10
+#define Green_Pin_6 11
+#define Green_Pin_7 12
+#define Green_Pin_8 8
+#define Green_Pin_9 9
+#define Green_Pin_10 7 // all port c
 
 #define RED_LED 18 
 #define FREQUENCY 1250
@@ -20,8 +20,9 @@
  
 extern int volatile LED_flag;
 int volatile RED_LED_FLAG = 1;
-int volatile Green_LED_index = 3;
+int volatile Green_LED_index = 0; // for accessing which pins are currently in use
 int volatile test_flag = 0;
+int Green_LED_array[] = {Green_Pin_1, Green_Pin_2, Green_Pin_3, Green_Pin_4, Green_Pin_5, Green_Pin_6, Green_Pin_7, Green_Pin_8, Green_Pin_9, Green_Pin_10};
 
 void Init_PIT(void) 
 {
@@ -92,9 +93,8 @@ void PIT_IRQHandler()
 	// Update the PIT value everytime after the execution of the PIT ISR
 	PIT->CHANNEL[0].LDVAL = LED_flag ? LOAD_500ms : LOAD_250ms; // CAUTION!	
 	
-	
 	// Update green led index 
-	Green_LED_index = (Green_LED_index == 12) ? 3 : Green_LED_index + 1;
+	Green_LED_index = (Green_LED_index == 10) ? 0 : Green_LED_index + 1;
 	
 	NVIC_ClearPendingIRQ(PIT_IRQn);
 }
@@ -118,7 +118,7 @@ void Green_LED_Control()
 	if (LED_flag) { // moving - running mode
 		PTC->PDOR &= ~(MASK(Green_Pin_1) | MASK(Green_Pin_2) | MASK(Green_Pin_3) | MASK(Green_Pin_4) | MASK(Green_Pin_5) | MASK(Green_Pin_6) | MASK(Green_Pin_7) | MASK(Green_Pin_8) | MASK(Green_Pin_9) | MASK(Green_Pin_10));
 	
-		PTC->PDOR |= MASK(Green_LED_index);
+		PTC->PDOR |= MASK(Green_LED_array[Green_LED_index]);
 	} else { // stationary - all on
 		PTC->PDOR |= (MASK(Green_Pin_1) | MASK(Green_Pin_2) | MASK(Green_Pin_3) | MASK(Green_Pin_4) | MASK(Green_Pin_5) | MASK(Green_Pin_6) | MASK(Green_Pin_7) | MASK(Green_Pin_8) | MASK(Green_Pin_9) | MASK(Green_Pin_10));
 	}

@@ -23,8 +23,12 @@
 #define NOTE_E5 659.25
 #define NOTE_F5 698.46
 #define NOTE_G5 783.99
+#define NOTE_G3 196.00
+#define NOTE_A3 220.00
+#define NOTE_B3 246.94
 
 extern Direction volatile Motor_flag;
+extern int volatile Buzzer_flag;
 static volatile int tone;
 static volatile int song_note;
 static volatile int check;
@@ -38,7 +42,22 @@ static int durations[] = {400, 200, 800, 800, 800, 800, 800,
                        400, 200, 800, 800, 800, 800, 800,
                        400, 200, 800, 800, 800, 800, 800, 800,
                        400, 200, 800, 800, 800, 800, 800};
-											 
+
+
+static float notes2[] = {
+    NOTE_E4, NOTE_D4, NOTE_C4, NOTE_D4, NOTE_E4, NOTE_E4, NOTE_E4, 
+    NOTE_D4, NOTE_D4, NOTE_D4, NOTE_E4, NOTE_G4, NOTE_G4,
+    NOTE_E4, NOTE_D4, NOTE_C4, NOTE_D4, NOTE_E4, NOTE_E4, NOTE_E4, 
+    NOTE_E4, NOTE_D4, NOTE_D4, NOTE_E4, NOTE_D4, NOTE_C4
+};
+
+static int durations2[] = {
+    400, 400, 400, 400, 400, 400, 800,
+    400, 400, 800, 400, 400, 800,
+    400, 400, 400, 400, 400, 400, 800,
+    400, 400, 400, 400, 400, 800
+};
+							 
 /* Delay Function */
 static void delay(volatile uint32_t nof) {
 	while(nof!=0) {
@@ -139,6 +158,8 @@ void playNoteI(float note, int duration) {
 void playHappyBirthday() {
 
     for (int i = 0; i < sizeof(notes)/sizeof(notes[0]); i++) { // There are 29 notes
+			if(Buzzer_flag == 1)
+				break;
 			int tone = processor_freq / (notes[i] * 128);
 			TPM2_MOD = tone;
 			TPM2_C1V = tone >> 2;
@@ -146,11 +167,32 @@ void playHappyBirthday() {
 			TPM2_C1V = 0;
 			osDelay(0.1 * durations[i]);
     }
-		
 } 
 
-void playEndSong() {
+void playEndSong() 
+{	
+    for (int i = 0; i < sizeof(notes2)/sizeof(notes2[0]); i++) { 
+			if(Buzzer_flag == 0)
+				break;
+			int tone = processor_freq / (notes2[i] * 128);
+			TPM2_MOD = tone;
+			TPM2_C1V = tone >> 2;
+			osDelay(0.9 * durations2[i]);
+			TPM2_C1V = 0;
+			osDelay(0.1 * durations2[i]);
+    }
+}
 
+void Buzzer_control()
+{
+	if (Buzzer_flag)
+	{
+		playEndSong();
+	}
+	else
+	{
+		playHappyBirthday();
+	}
 }
 
 void PWM01_forward(int scale) { //left

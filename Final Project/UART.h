@@ -11,6 +11,7 @@
 volatile uint8_t data;
 unsigned int counter = 0;
 int volatile LED_flag = 1;
+int volatile Buzzer_flag = 0; // 0 for course run, 1 for termination tune
 Direction volatile Motor_flag = Stationary;
 
 void Init_UART2(uint32_t baud_rate)
@@ -101,6 +102,14 @@ void UART2_IRQHandler()
 	if (UART2->S1 & UART_S1_RDRF_MASK) 
 	{
 		data = UART2->D;
+		if (data == 0x43)
+		{
+			Buzzer_flag = 1;
+		}
+		else 
+		{
+			Buzzer_flag = 0;
+		}
 		Motor_flag = Direction_convert(data);
 		LED_flag = LED_convert(data);
 	}

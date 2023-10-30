@@ -36,7 +36,7 @@ void Buzzer_thread()
 {
 	for (;;) 
 	{
-		playHappyBirthday();
+		Buzzer_control();
 	}
 } 
 
