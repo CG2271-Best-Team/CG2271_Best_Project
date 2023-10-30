@@ -1,5 +1,6 @@
 #include "MKL25Z4.h"
 #include "Directions.h"
+#include "cmsis_os2.h"
 
 #define BAUD_RATE 9600
 #define UART_RX_PORTE23 23
@@ -10,9 +11,14 @@
 
 volatile uint8_t data;
 unsigned int counter = 0;
-int volatile LED_flag = 1;
+
+int volatile LED_flag = 1; // 1 for moving, 0 for stationary
 int volatile Buzzer_flag = 0; // 0 for course run, 1 for termination tune
 Direction volatile Motor_flag = Stationary;
+
+extern osThreadId_t data_thread_id;
+
+
 
 void Init_UART2(uint32_t baud_rate)
 {
@@ -95,27 +101,36 @@ int LED_convert (uint8_t data)
 	}
 }
 
-void UART2_IRQHandler() 
+
+int Buzzer_convert (uint8_t data)
+{
+	if(data == 0x43)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+void UART2_IRQHandler() // the UART IRQ sets the thread flag for data decoding thread to read in and decode the data
 {
 	NVIC_ClearPendingIRQ(UART2_IRQn);
 	
 	if (UART2->S1 & UART_S1_RDRF_MASK) 
 	{
-		data = UART2->D;
-		if (data == 0x43)
-		{
-			Buzzer_flag = 1;
-		}
-		else 
-		{
-			Buzzer_flag = 0;
-		}
-		Motor_flag = Direction_convert(data);
-		LED_flag = LED_convert(data);
+		osThreadFlagsSet(data_thread_id, 0x00000001);
 	}
 }
 
-
+void Data_decode()
+{
+	data = UART2->D;
+	Buzzer_flag = Buzzer_convert(data);
+	Motor_flag = Direction_convert(data);
+	LED_flag = LED_convert(data);
+}
 
 /* In PWM for now
 void Motor_Control(void) {

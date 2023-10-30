@@ -10,6 +10,8 @@
 #include "PIT.h"
 #include "Directions.h"
 
+osThreadId_t data_thread_id;
+
 //int volatile
 /*----------------------------------------------------------------------------
  * Application main thread
@@ -48,6 +50,16 @@ void Motor_thread()
 	}
 }
 
+
+void Data_thread()
+{
+	for (;;)
+	{
+		osThreadFlagsWait(0x00000001, osFlagsWaitAll, osWaitForever); // wait for the LSB to be set to start decoding data
+		Data_decode();
+	}
+}
+
 int main (void) {
  
   // System Initialization
@@ -58,10 +70,13 @@ int main (void) {
   // ...
  
   osKernelInitialize();                 // Initialize CMSIS-RTOS
+	
+	data_thread_id = osThreadNew(Data_thread, NULL, NULL); // Brain thread for decoding UART data
   osThreadNew(Red_LED_thread, NULL, NULL);    // Create application main thread
 	osThreadNew(Green_LED_thread, NULL, NULL);
 	osThreadNew(Buzzer_thread, NULL, NULL);
 	osThreadNew(Motor_thread, NULL, NULL);
+	
   osKernelStart();                      // Start thread execution
   for (;;) {}
 }
