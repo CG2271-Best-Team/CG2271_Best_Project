@@ -59,7 +59,7 @@ void Init_UART2(uint32_t baud_rate)
 
 Direction Direction_convert(uint8_t data)
 {
-	if(data == 0x37)
+	if(data == 0x37 || data == 0x43)
 	{
 		return Stationary;
 	}
@@ -130,6 +130,7 @@ void Data_decode()
 	Buzzer_flag = Buzzer_convert(data);
 	Motor_flag = Direction_convert(data);
 	LED_flag = LED_convert(data);
+	
 }
 
 /* In PWM for now

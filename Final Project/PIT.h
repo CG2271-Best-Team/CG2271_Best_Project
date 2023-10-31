@@ -1,16 +1,16 @@
 #include "MKL25Z4.h"
 
 #define PTC1_Pin 1 // all port c
-#define Green_Pin_1 3
-#define Green_Pin_2 4
-#define Green_Pin_3 5
-#define Green_Pin_4 6
-#define Green_Pin_5 10
-#define Green_Pin_6 11
-#define Green_Pin_7 12
-#define Green_Pin_8 8
-#define Green_Pin_9 9
-#define Green_Pin_10 7 // all port c
+#define Green_Pin_1 7
+#define Green_Pin_2 9
+#define Green_Pin_3 8
+#define Green_Pin_4 3
+#define Green_Pin_5 5
+#define Green_Pin_6 4
+#define Green_Pin_7 6
+#define Green_Pin_8 10
+#define Green_Pin_9 11
+#define Green_Pin_10 12 // all port c
 
 #define RED_LED 18 
 #define FREQUENCY 1250
